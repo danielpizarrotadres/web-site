@@ -1,0 +1,16 @@
+.App {
+    height: 100vh;
+    background-image: url('https://innocenzi.dev/assets/background.90c96182.webp');
+    background-color: #040404;
+    background-repeat: no-repeat;
+}
+
+.Header {
+    height: 1000px;
+    text-align: center;
+    padding-top: 600px;
+}
+
+.Title {
+    font-size: 4rem;
+}
