@@ -1,16 +1,61 @@
+:root {
+    --primary-black: #040404;
+    --border-logo: rgb(255 255 255 / .1);
+    --navigation-height: 44px;
+}
+
 .App {
     height: 100vh;
-    background-image: url('https://innocenzi.dev/assets/background.90c96182.webp');
-    background-color: #040404;
+    background-image: none; /* url('https://innocenzi.dev/assets/background.90c96182.webp'); */
+    background-color: var(--primary-black);
     background-repeat: no-repeat;
+    padding: 0 10rem;
 }
+
+main {
+    margin: 3rem 0 0 0;
+}
+
+@media screen and (max-width: 912px) {
+    .App {
+        padding: 0 2rem;
+    }
+}
+
+/************************************************ Header *************************************************/
 
 .Header {
-    height: 1000px;
-    text-align: center;
-    padding-top: 600px;
+    border: 1px solid white;
+    padding: 5rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.Title {
-    font-size: 4rem;
+.Logo {
+    display: inline-block;
+    border-radius: 100%;
+    border: 3px solid var(--border-logo);
 }
+
+.Navigation {
+    display: inline-block;
+}
+
+.ItemList {
+    height: var(--navigation-height);
+    display: flex;
+    align-items: center;
+}
+
+.Item {
+    display: block;
+}
+
+@media screen and (max-width: 912px) {
+    .Header {
+        padding: 3rem 0 0 0;
+    }
+}
+
+/************************************************ End Header *************************************************/

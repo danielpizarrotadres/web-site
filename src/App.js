@@ -1,13 +1,66 @@
-import classes from './App.module.css';
+import classes from './App.module.css'; 
+import { AiFillHome } from 'react-icons/ai'
 
 const App = () => {
     return (
-        <div class={classes.App}>
-            <header class={classes.Header}>
-                <h1 class={classes.Title}>
-                    Hello world!
-                </h1>
+        <div className={classes.App}>
+
+            {   /*********************** Header *********************/   }
+
+            <header className={classes.Header}>
+                <img
+                    alt='Daniel Pizarro'
+                    src='https://innocenzi.dev/assets/avatar.f3bd8837_ZLDpvT.jpg'
+                    className={classes.Logo}
+                />
+                <nav className={classes.Navigation}>
+                    <ul className={classes.ItemList}>
+                        <li className={classes.Item}>
+                            <a href='some-url-ref'>
+                                <AiFillHome />
+                            </a>
+                        </li>
+                        <li className={classes.Item}>
+                            <a href='some-url-ref'>
+                                Articles
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </header>
+
+            {   /*********************** Header End *****************/   }
+
+
+
+
+            {   /*********************** Main *********************/   }
+
+            <main>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of letters, as opposed to using 'Content here, content here',
+                making it look like readable English. Many desktop publishing
+                packages and web page editors now use Lorem Ipsum as their
+                default model text, and a search for 'lorem ipsum' will uncover
+                many web sites still in their infancy. Various versions have
+                evolved over the years, sometimes by accident, sometimes
+                on purpose (injected humour and the like).
+            </main>
+
+            {   /*********************** Main End *****************/   }
+
+
+
+
+            {   /*********************** Footer *********************/   }
+
+            {   /*********************** Footer End *****************/   }
+
+
+
+
         </div>
     );
 }
