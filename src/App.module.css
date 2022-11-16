@@ -1,5 +1,7 @@
 :root {
     --primary-black: #040404;
+    --primary-gray: #27272ae6;
+    --primary-white: #ffffff;
     --border-logo: rgb(255 255 255 / .1);
     --navigation-height: 44px;
 }
@@ -44,17 +46,33 @@ main {
 
 .ItemList {
     height: var(--navigation-height);
+    background-color: var(--primary-gray);
     display: flex;
     align-items: center;
+    border-radius: 9999px;
+    padding: 0 0.75rem;
 }
 
 .Item {
     display: block;
 }
 
+.Link {
+    color: var(--primary-white);
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+
+.HomeIcon {
+    position: relative;
+    bottom: -1px;
+}
+
 @media screen and (max-width: 912px) {
     .Header {
-        padding: 3rem 0 0 0;
+        padding: 5rem 0 0 0;
     }
 }
 

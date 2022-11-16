@@ -16,12 +16,18 @@ const App = () => {
                 <nav className={classes.Navigation}>
                     <ul className={classes.ItemList}>
                         <li className={classes.Item}>
-                            <a href='some-url-ref'>
-                                <AiFillHome />
+                            <a
+                                className={classes.Link}
+                                href='https://some-url-ref.com'
+                            >
+                                <AiFillHome className={classes.HomeIcon} />
                             </a>
                         </li>
                         <li className={classes.Item}>
-                            <a href='some-url-ref'>
+                            <a
+                                className={classes.Link}
+                                href='https://some-url-ref.com'
+                            >
                                 Articles
                             </a>
                         </li>
