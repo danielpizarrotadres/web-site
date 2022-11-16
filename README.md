@@ -1,71 +1,122 @@
-# Getting Started with Create React App
+<p align="center">
+    
+<h1 align="center"><a href="https://codewonders.dev">Daniel Wonderful's Website</a></h1>
+<p align="center"> Full-stack web & mobile developer</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</p>
 
-## Available Scripts
+## Running locally in development mode
 
-In the project directory, you can run:
+To get started, just clone the repository and run `npm install && npm run dev`:
 
-### `npm start`
+    git clone https://github.com/iaincollins/nextjs-starter.git
+    npm install
+    npm run dev
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Note: If you are running on Windows run install --noptional flag (i.e.
+`npm install --no-optional`) which will skip installing fsevents.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Building and deploying in production
 
-### `npm test`
+If you wanted to run this site in production, you should install modules then
+build the site with `npm run build` and run it with `npm start`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    npm install
+    npm run build
+    npm start
 
-### `npm run build`
+You should run `npm run build` again any time you make changes to the site.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Note: If you are already running a webserver on port 80 (e.g. Macs usually have
+the Apache webserver running on port 80) you can still start the example in
+production mode by passing a different port as an Environment Variable when
+starting (e.g. `PORT=3000 npm start`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Configuring
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you configure a .env file (just copy
+[.env.example](https://github.com/iaincollins/nextjs-starter/blob/master/.env.example)
+over to '.env' and fill in the options) you can configure a range of options.
 
-### `npm run eject`
+See the
+[AUTHENTICATION.md](https://github.com/iaincollins/nextjs-starter/blob/master/AUTHENTICATION.md)
+for how to set up oAuth if you want to do that. It suggested you start with
+Twitter as it's the easiest to get working.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deploying to the cloud with now.sh
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To deploy to production on [Zeit's now.sh cloud platform](https://zeit.co) you
+will need to install the `Now` desktop app on your computer. If you don't want
+to install the `Now` desktop app, you can use the following command to install
+it (either approach is fine):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    sudo npm i -g --unsafe-perm now
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Once installed, open `now.json` and set a `name` and `alias` for your site.
 
-## Learn More
+To deploy, just run `now` in the working directory:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    npm install -g now
+    now
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you configure a .env file `now` will include it when deploying if you use the
+-E option to deploy:
 
-### Code Splitting
+    now -E
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you want to have your local `.env` file have variables for local development
+and have a different sent of variables you use in production, you can create
+additional .env files and tell `now` to use a specific file when deploying:
 
-### Analyzing the Bundle Size
+    now -E production.env
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### After deploying
 
-### Making a Progressive Web App
+Once you have deployed, `now` will return a URL where the site when it has been
+deployed to, you can use this to preview everything works correctly in the
+browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If you have set an alias for the site, you can then make the site live on the
+alias you have defined using `now alias`:
 
-### Advanced Configuration
+    now alias
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+By default, this will point any aliases you have set in `now.json` to your site.
 
-### Deployment
+You can configure `now` to use aliases with custom domains using the
+`now domain` and `now dns` commands.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Further reading
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# hello-world
+### Database hosting
+
+If you need an instance of MongoDB in the cloud https://mlab.com/ have free and
+inexpensive options.
+
+### Secrets for Environment Variables
+
+Once you are comfortable using `.env` files for configuration and running and
+deploying your app, take a look at `now secrets` to set options in the cloud so
+you don't have to set them each time you deploy.
+
+### GitHub integration
+
+You can integrate `now` with a GitHub account to trigger automated deployments
+anytime you push to GitHub. This works great if you have secrets set up!
+
+### Now 2.0
+
+When you deploy this project you will see this message as of November 2018:
+
+    WARN! You are using an old version of the Now Platform. More: https://zeit.co/docs/v1-upgrade
+
+Now 2.0 was released in November 2018 and works differently from Now 1.0. This
+project has not been updated for Now 2.0. You may ignore this message for now.
+
+### Alternate hosting options
+
+You can host your Next.js site with any hosting provider. Although it works
+great on Now, it also works great with other providers like Heroku, Amazon Web
+Service, Google Cloud Platform, Microsoft Azure, DigitalOcean and others.
