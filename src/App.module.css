@@ -2,6 +2,7 @@
     --primary-black: #040404;
     --primary-gray: #27272ae6;
     --primary-white: #ffffff;
+    --primary-pink: #FBCFE8;
     --border-logo: rgb(255 255 255 / .1);
     --navigation-height: 44px;
 }
@@ -15,7 +16,7 @@
 }
 
 main {
-    margin: 3rem 0 0 0;
+    margin: 8rem 0 0 0;
 }
 
 @media screen and (max-width: 912px) {
@@ -68,6 +69,10 @@ main {
 .HomeIcon {
     position: relative;
     bottom: -1px;
+}
+
+.Link:active {
+    color: var(--primary-pink);
 }
 
 @media screen and (max-width: 912px) {

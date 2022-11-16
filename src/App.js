@@ -18,7 +18,7 @@ const App = () => {
                         <li className={classes.Item}>
                             <a
                                 className={classes.Link}
-                                href='https://some-url-ref.com'
+                                href='/'
                             >
                                 <AiFillHome className={classes.HomeIcon} />
                             </a>
