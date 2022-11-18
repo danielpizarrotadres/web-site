@@ -2,11 +2,11 @@
 ## Server Information
 
 ### Environment
-- Node.js v16.6.1
+- React v18.2.0
 - npm v7.20.5
 
 ### Frameworks
-- Express v4.17.1
+- ReactJS v18.2.0
 
 [![Build Status]()]()
 
