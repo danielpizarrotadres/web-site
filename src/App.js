@@ -10,7 +10,7 @@ const App = () => {
             <header className={classes.Header}>
                 <img
                     alt='Daniel Pizarro'
-                    src='https://innocenzi.dev/assets/avatar.f3bd8837_ZLDpvT.jpg'
+                    src='https://innocenzi.dev/_nuxt/avatar.da11de5a.jpg'
                     className={classes.Logo}
                 />
                 <nav className={classes.Navigation}>
@@ -18,9 +18,10 @@ const App = () => {
                         <li className={classes.Item}>
                             <a
                                 className={classes.Link}
-                                href='/'
+                                href='https://some-url-ref.com'
                             >
-                                <AiFillHome className={classes.HomeIcon} />
+                                { /* <AiFillHome className={classes.HomeIcon} /> */ }
+                                About
                             </a>
                         </li>
                         <li className={classes.Item}>
