@@ -1,7 +1,64 @@
+import React, { useEffect, useState } from 'react';
 import classes from './App.module.css'; 
-import { AiFillHome } from 'react-icons/ai'
+// import { AiFillHome } from 'react-icons/ai';
+// import { IoIosArrowDown } from 'react-icons/io';
+
 
 const App = () => {
+    const [isMobile] = useState(true);
+
+    useEffect(() => {
+        console.log('useEffect runs now');
+    }, []);
+
+    const navigation = () => {
+        return isMobile ? mobileNavigation() : desktopNavigation();
+    }
+
+    const mobileNavigation = () => {
+        return (
+                <nav className={classes.Navigation}>
+                    <ul className={classes.ItemList}>
+                        <li className={classes.Item}>
+                            <a
+                                className={classes.Link}
+                                href='https://some-url-ref.com'
+                            >
+                                { /* <AiFillHome className={classes.HomeIcon} /> */ }
+                                Menu
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            );
+    }
+
+    const desktopNavigation = () => {
+        return (
+            <nav className={classes.Navigation}>
+                <ul className={classes.ItemList}>
+                    <li className={classes.Item}>
+                        <a
+                            className={classes.Link}
+                            href='https://some-url-ref.com'
+                        >
+                            { /* <AiFillHome className={classes.HomeIcon} /> */ }
+                            About
+                        </a>
+                    </li>
+                    <li className={classes.Item}>
+                        <a
+                            className={classes.Link}
+                            href='https://some-url-ref.com'
+                        >
+                            Articles
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        );
+    }
+
     return (
         <div className={classes.App}>
 
@@ -13,27 +70,7 @@ const App = () => {
                     src='https://innocenzi.dev/_nuxt/avatar.da11de5a.jpg'
                     className={classes.Logo}
                 />
-                <nav className={classes.Navigation}>
-                    <ul className={classes.ItemList}>
-                        <li className={classes.Item}>
-                            <a
-                                className={classes.Link}
-                                href='https://some-url-ref.com'
-                            >
-                                { /* <AiFillHome className={classes.HomeIcon} /> */ }
-                                About
-                            </a>
-                        </li>
-                        <li className={classes.Item}>
-                            <a
-                                className={classes.Link}
-                                href='https://some-url-ref.com'
-                            >
-                                Articles
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                { navigation() }
             </header>
 
             {   /*********************** Header End *****************/   }
