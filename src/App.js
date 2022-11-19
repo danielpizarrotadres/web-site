@@ -12,29 +12,7 @@ const App = () => {
     }, []);
 
     const navigation = () => {
-        return isMobile ? mobileNavigation() : desktopNavigation();
-    }
-
-    const mobileNavigation = () => {
-        return (
-                <nav className={classes.Navigation}>
-                    <ul className={classes.ItemList}>
-                        <li className={classes.Item}>
-                            <a
-                                className={classes.Link}
-                                href='https://some-url-ref.com'
-                            >
-                                { /* <AiFillHome className={classes.HomeIcon} /> */ }
-                                Menu
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            );
-    }
-
-    const desktopNavigation = () => {
-        return (
+        let nav = (
             <nav className={classes.Navigation}>
                 <ul className={classes.ItemList}>
                     <li className={classes.Item}>
@@ -57,6 +35,23 @@ const App = () => {
                 </ul>
             </nav>
         );
+        if (!isMobile) return nav;
+        nav = (
+            <nav className={classes.Navigation}>
+                <ul className={classes.ItemList}>
+                    <li className={classes.Item}>
+                        <a
+                            className={classes.Link}
+                            href='https://some-url-ref.com'
+                        >
+                            { /* <AiFillHome className={classes.HomeIcon} /> */ }
+                            Menu
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        );
+        return nav;
     }
 
     return (
