@@ -5,53 +5,95 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 
 const App = () => {
-    const [isMobile] = useState(true);
+    const [size] = useState('md');
 
     useEffect(() => {
         console.log('useEffect runs now');
     }, []);
 
     const navigation = () => {
-        let nav = (
-            <nav className={classes.Navigation}>
-                <ul className={classes.ItemList}>
-                    <li className={classes.Item}>
-                        <a
-                            className={classes.Link}
-                            href='https://some-url-ref.com'
-                        >
-                            { /* <AiFillHome className={classes.HomeIcon} /> */ }
-                            About
-                        </a>
-                    </li>
-                    <li className={classes.Item}>
-                        <a
-                            className={classes.Link}
-                            href='https://some-url-ref.com'
-                        >
-                            Articles
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        );
-        if (!isMobile) return nav;
-        nav = (
-            <nav className={classes.Navigation}>
-                <ul className={classes.ItemList}>
-                    <li className={classes.Item}>
-                        <a
-                            className={classes.Link}
-                            href='https://some-url-ref.com'
-                        >
-                            Menu
-                            <IoIosArrowDown className={classes.ArrowIcon} />
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        );
-        return nav;
+        switch (size) {
+            case 'sm': // -> Small >= 576px
+                return (
+                    <nav className={classes.Navigation}>
+                        <ul className={classes.ItemList}>
+                            <li className={classes.Item}>
+                                <a
+                                    className={classes.Link}
+                                    href='https://some-url-ref.com'
+                                >
+                                    Menu
+                                    <IoIosArrowDown className={classes.ArrowIcon} />
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                );
+            case 'md': // -> Medium >= 768px
+                return (
+                    <nav className={classes.Navigation}>
+                        <ul className={classes.ItemList}>
+                            <li className={classes.Item}>
+                                <a
+                                    className={classes.Link}
+                                    href='https://some-url-ref.com'
+                                >
+                                    Menu
+                                    <IoIosArrowDown className={classes.ArrowIcon} />
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                );
+            case 'lg': // -> Large >= 992px
+                return (
+                    <nav className={classes.Navigation}>
+                        <ul className={classes.ItemList}>
+                            <li className={classes.Item}>
+                                <a
+                                    className={classes.Link}
+                                    href='https://some-url-ref.com'
+                                >
+                                    About
+                                </a>
+                            </li>
+                            <li className={classes.Item}>
+                                <a
+                                    className={classes.Link}
+                                    href='https://some-url-ref.com'
+                                >
+                                    Articles
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                );
+            case 'xl': // -> Extra Large >= 1200px
+                return (
+                    <nav className={classes.Navigation}>
+                        <ul className={classes.ItemList}>
+                            <li className={classes.Item}>
+                                <a
+                                    className={classes.Link}
+                                    href='https://some-url-ref.com'
+                                >
+                                    About
+                                </a>
+                            </li>
+                            <li className={classes.Item}>
+                                <a
+                                    className={classes.Link}
+                                    href='https://some-url-ref.com'
+                                >
+                                    Articles
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                );
+            default:
+                break;
+        }
     }
 
     return (
