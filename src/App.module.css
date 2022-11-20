@@ -89,6 +89,10 @@ main {
     left: 2px;
 }
 
+.Link:active {
+    color: var(--primary-pink);
+}
+
 /* Test to use keyframes
 
 .Link:active {
