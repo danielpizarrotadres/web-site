@@ -93,6 +93,10 @@ main {
     color: var(--primary-pink);
 }
 
+.ArrowIcon:hover {
+    transform: rotate(20deg);
+}
+
 /* Test to use keyframes
 
 .Link:active {
