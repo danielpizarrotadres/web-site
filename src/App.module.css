@@ -88,7 +88,7 @@ main {
 
 .ArrowIcon {
     position: relative;
-    left: 2px;
+    left: 4px;
     top: 2px;
     font-size: 12px;
     color: var(--secondary-gray);
@@ -116,7 +116,13 @@ main {
     font-weight: 600;
 }
 
-.ArrowIcon:hover {
+/*
+    The following instruction allow:
+
+    When the parent element is hover,
+    The child element will rotate in 180 degrees
+*/
+.Toggle:hover .ArrowIcon {
     transform: rotate(180deg);
 }
 
