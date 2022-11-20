@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import classes from './App.module.css'; 
 // import { AiFillHome } from 'react-icons/ai';
-// import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowDown } from 'react-icons/io';
 
 
 const App = () => {
@@ -44,8 +44,8 @@ const App = () => {
                             className={classes.Link}
                             href='https://some-url-ref.com'
                         >
-                            { /* <AiFillHome className={classes.HomeIcon} /> */ }
                             Menu
+                            <IoIosArrowDown className={classes.ArrowIcon} />
                         </a>
                     </li>
                 </ul>

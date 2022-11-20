@@ -66,6 +66,16 @@ main {
     font-weight: 600;
     font-size: .875rem;
     line-height: 1.25rem;
+
+    /*
+        The following classes are usefull for Menu Navigation on moviles devies.
+        This allow position centered the Menu text and the arrow Icon,
+        Without this classes both elements, the text and the arrow icon will be
+        displayed in the dom without a correct position and alignment
+    */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .HomeIcon {
@@ -73,9 +83,24 @@ main {
     bottom: -1px;
 }
 
-.Link:active {
-    color: var(--primary-pink);
+.ArrowIcon {
+    position: relative;
+    bottom: -1px;
+    left: 2px;
 }
+
+/* Test to use keyframes
+
+.Link:active {
+    color: yellow; or var(--primary-pink);
+}
+
+.ArrowIcon:active {
+    color: aqua;
+}
+
+*/
+
 
 @media screen and (max-width: 912px) {
     .Header {
