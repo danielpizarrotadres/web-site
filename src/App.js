@@ -5,6 +5,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 
 const App = () => {
+    // TODO: Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     const [size] = useState('md');
 
     useEffect(() => {
