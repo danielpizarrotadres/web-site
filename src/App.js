@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import classes from './App.module.css'; 
 // import { AiFillHome } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io';
+import logo from './logo.jpg';
 
 
 const App = () => {
@@ -104,8 +105,8 @@ const App = () => {
 
             <header className={classes.Header}>
                 <img
-                    alt='Daniel Pizarro'
-                    src='https://innocenzi.dev/_nuxt/avatar.da11de5a.jpg'
+                    alt='logo'
+                    src={logo}
                     className={classes.Logo}
                 />
                 { navigation() }
