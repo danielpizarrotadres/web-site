@@ -25,7 +25,7 @@ const App = () => {
                         className={classes.ArrowIcon}
                        />
                     </button>
-                </React.Fragment>
+                </React.Fragment>;
             case 'lg': // -> Large >= 992px
             case 'xl': // -> Extra Large >= 1200px
             default:
