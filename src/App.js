@@ -9,17 +9,21 @@ import arrow from './logo.svg';
 const App = () => {
     // TODO: Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     const [size] = useState('md');
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     useEffect(() => {
-        console.log('useEffect runs now');
-    }, []);
+        console.log('useEffect runs now: ', showMobileMenu);
+    }, [showMobileMenu]);
 
     const navigation = () => {
         switch (size) {
             case 'sm': // -> Small >= 576px
             case 'md': // -> Medium >= 768px
                 return <React.Fragment>
-                    <button className={classes.Toggle}>
+                    <button
+                        className={classes.Toggle}
+                        onClick={handlerOnClick}
+                    >
                         Menu
                        <IoIosArrowDown
                         className={classes.ArrowIcon}
@@ -30,19 +34,39 @@ const App = () => {
             case 'xl': // -> Extra Large >= 1200px
             default:
                 return <React.Fragment>
-                    <nav className={classes.Navigation}>
-                        <ul className={classes.ItemList}>
-                            <li className={classes.Item}>
+                    <nav
+                        className={
+                            classes.Navigation
+                        }
+                    >
+                        <ul
+                            className={
+                                classes.ItemList
+                            }
+                        >
+                            <li
+                                className={
+                                    classes.Item
+                                }
+                            >
                                 <a
-                                    className={classes.Link}
+                                    className={
+                                        classes.Link
+                                    }
                                     href='https://some-url-ref.com'
                                 >
                                     About
                                 </a>
                             </li>
-                            <li className={classes.Item}>
+                            <li
+                                className={
+                                    classes.Item
+                                }
+                            >
                                 <a
-                                    className={classes.Link}
+                                    className={
+                                        classes.Link
+                                    }
                                     href='https://some-url-ref.com'
                                 >
                                     Articles
@@ -54,18 +78,34 @@ const App = () => {
         }
     }
 
+    const handlerOnClick = () => {
+        setShowMobileMenu(!showMobileMenu);
+    }
+
     return (
-        <div className={classes.App}>
+        <div
+            className={
+                classes.App
+            }
+        >
 
             {   /*********************** Header *********************/   }
 
-            <header className={classes.Header}>
+            <header
+                className={
+                    classes.Header
+                }
+            >
                 <img
                     alt='logo'
                     src={logo}
-                    className={classes.Logo}
+                    className={
+                        classes.Logo
+                    }
                 />
-                { navigation() }
+                {
+                    navigation()
+                }
             </header>
 
             {   /*********************** Header End *****************/   }
