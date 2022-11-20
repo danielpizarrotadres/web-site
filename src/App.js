@@ -3,6 +3,7 @@ import classes from './App.module.css';
 // import { AiFillHome } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io';
 import logo from './logo.jpg';
+import arrow from './logo.svg';
 
 
 const App = () => {
@@ -16,62 +17,19 @@ const App = () => {
     const navigation = () => {
         switch (size) {
             case 'sm': // -> Small >= 576px
-                return (
-                    <nav className={classes.Navigation}>
-                        <ul className={classes.ItemList}>
-                            <li className={classes.Item}>
-                                <a
-                                    className={classes.Link}
-                                    href='https://some-url-ref.com'
-                                >
-                                    Menu
-                                    <IoIosArrowDown className={classes.ArrowIcon} />
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                );
             case 'md': // -> Medium >= 768px
-                return (
-                    <nav className={classes.Navigation}>
-                        <ul className={classes.ItemList}>
-                            <li className={classes.Item}>
-                                <a
-                                    className={classes.Link}
-                                    href='https://some-url-ref.com'
-                                >
-                                    Menu
-                                    <IoIosArrowDown className={classes.ArrowIcon} />
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                );
+                return <React.Fragment>
+                    <button className={classes.Toggle}>
+                        Menu
+                       <IoIosArrowDown
+                        className={classes.ArrowIcon}
+                       />
+                    </button>
+                </React.Fragment>
             case 'lg': // -> Large >= 992px
-                return (
-                    <nav className={classes.Navigation}>
-                        <ul className={classes.ItemList}>
-                            <li className={classes.Item}>
-                                <a
-                                    className={classes.Link}
-                                    href='https://some-url-ref.com'
-                                >
-                                    About
-                                </a>
-                            </li>
-                            <li className={classes.Item}>
-                                <a
-                                    className={classes.Link}
-                                    href='https://some-url-ref.com'
-                                >
-                                    Articles
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                );
             case 'xl': // -> Extra Large >= 1200px
-                return (
+            default:
+                return <React.Fragment>
                     <nav className={classes.Navigation}>
                         <ul className={classes.ItemList}>
                             <li className={classes.Item}>
@@ -92,9 +50,7 @@ const App = () => {
                             </li>
                         </ul>
                     </nav>
-                );
-            default:
-                break;
+                </React.Fragment>;
         }
     }
 
