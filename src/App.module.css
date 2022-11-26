@@ -16,10 +16,11 @@
     background-repeat: no-repeat;
     padding: 0 12rem;
     font-family: inherit;
+    overflow: auto; /* This allow avoid overflow. */
 }
 
 main {
-    margin: 8rem 0 0 0;
+    margin: 128px 0 0 0;
 }
 
 @media screen and (max-width: 912px) {
@@ -31,7 +32,7 @@ main {
 /************************************************ Header *************************************************/
 
 .Header {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     padding: 5rem 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -153,3 +154,96 @@ main {
 }
 
 /************************************************ End Header *************************************************/
+
+
+/************************************************ Main Section *************************************************/
+
+.Main {
+    max-width: 672px;
+    /* border: 1px solid white; */
+}
+
+.Title {
+    font-size: 3rem;
+    line-height: 1.25;
+    color: rgb(228 228 231/1);
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -1.2px;
+}
+
+.Resume {
+    max-width: 672px;
+    margin: 48px 0 0 0;
+    /* border: 1px solid orangered; */
+    text-align: justify;
+}
+
+.TopItem {
+    color: rgb(161, 161, 170);
+    font-size: 20px;
+}
+
+.BottomItem {
+    color: rgb(161, 161, 170);
+    font-size: 20px;
+    line-height: 28px;
+    margin: 28px 0 0 0;
+}
+
+.IconContainer {
+    color: rgb(161, 161, 170);
+    display: flex;
+    margin: 32px 0 0 0;
+    /* border: 1px solid blueviolet */ 
+    max-width: 672px;
+}
+
+.Icon {
+    color: rgb(113, 113, 122);
+    cursor: pointer;
+    font-size: 24px;
+    display: block;
+    margin: 0 22px 0 0;
+}
+
+.Icon:hover {
+    color: var(--primary-white);
+}
+
+.Highlight {
+    background-color: rgb(153, 246, 228, 0.1);
+    color: rgb(153, 246, 228, 0.9);
+    font-size: 20px;
+    padding: 0.125rem 0.75rem;
+    border-radius: 9999px;
+    display: inline;
+}
+
+.ScreenPlay {
+    margin-right: 6px;
+}
+
+.Slim {
+    color: rgb(153, 246, 228, 0.9);
+    font-weight: 500;
+}
+
+.Point, .PinkPoint {
+    font-weight: 900;
+}
+
+.PinkHighlight {
+    background-color: rgb(251, 207, 232, 0.1);
+    color: rgb(251, 207, 232, 0.9);
+    font-size: 20px;
+    padding: 0.125rem 0.75rem;
+    border-radius: 9999px;
+    display: inline;
+}
+
+.PinkSlim {
+    color: rgb(251, 207, 232, 0.9);
+    font-weight: 500;
+}
+/************************************************ End Main Section *************************************************/

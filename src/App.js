@@ -4,16 +4,23 @@ import classes from './App.module.css';
 import { IoIosArrowDown } from 'react-icons/io';
 import logo from './logo.jpg';
 import arrow from './logo.svg';
+import { BsGithub } from 'react-icons/bs';
+import { TfiTwitterAlt } from 'react-icons/tfi';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { MdEmail } from 'react-icons/md';
 
 
 const App = () => {
-    // TODO: Make funcionality to update size state dinamycally by the current px of the naigation viewport.
-    const [size] = useState('md');
+    // TODO:
+    // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
+    // -> Convert containers into isolated components.
+    // -> Make funcionality to render mobile navigation with animations.
+    const [size] = useState('xl');
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-    useEffect(() => {
-        console.log('useEffect runs now: ', showMobileMenu);
-    }, [showMobileMenu]);
+    // useEffect(() => {
+    //     console.log('useEffect runs now: ', showMobileMenu);
+    // }, [showMobileMenu]);
 
     const navigation = () => {
         switch (size) {
@@ -26,7 +33,7 @@ const App = () => {
                     >
                         Menu
                        <IoIosArrowDown
-                        className={classes.ArrowIcon}
+                            className={classes.ArrowIcon}
                        />
                     </button>
                 </React.Fragment>;
@@ -76,11 +83,71 @@ const App = () => {
                     </nav>
                 </React.Fragment>;
         }
-    }
+    };
+
+    // returns JSX Fragment with required csss classes.
+    const resume = () => {
+        return <React.Fragment>
+                <div className={classes.Resume}>
+                    <p className={classes.TopItem}>
+                        I am passionate about development <span className={classes.ScreenPlay}>—</span>
+                        <span className={classes.Highlight}> I love automating things </span>
+                        <span className={classes.Point}>,</span>
+                        <span className={classes.Slim}> modern technologies </span> and
+                        <span className={classes.Slim}> good developer experience</span> 
+                        <span className={classes.Point}>.</span>
+                    </p>
+                    <p className={classes.BottomItem}>
+                        <span className={classes.PinkHighlight}>I am a perfectionist</span>
+                        <span className={classes.PinkPoint}>. </span>  
+                        I pay attention to details,
+                        because I love when things look
+                        <span className={classes.PinkSlim}> good </span> 
+                        and
+                        <span className={classes.PinkSlim}> professionnal</span>
+                        <span className={classes.PinkPoint}>.</span>
+                        I am also self-taught, and
+                        <span className={classes.PinkSlim}> I never stop learning</span>
+                        <span className={classes.PinkPoint}>.</span>
+                    </p>
+                </div>
+        </React.Fragment>;
+    };
+
+    const icons = () => {
+        return <React.Fragment>
+                <div className={classes.IconContainer}>
+                    <a
+                        className={classes.Icon}
+                        href='https://some-url-ref.com'
+                    >
+                        <BsGithub />
+                    </a>
+                    <a
+                        className={classes.Icon}
+                        href='https://some-url-ref.com'
+                    >
+                        <TfiTwitterAlt />
+                    </a>
+                    <a
+                        className={classes.Icon}
+                        href='https://some-url-ref.com'
+                    >
+                        <AiFillLinkedin />
+                    </a>
+                    <a
+                        className={classes.Icon}
+                        href='https://some-url-ref.com'
+                    >
+                        <MdEmail />
+                    </a>
+                </div>
+        </React.Fragment>
+    };
 
     const handlerOnClick = () => {
         setShowMobileMenu(!showMobileMenu);
-    }
+    };
 
     return (
         <div
@@ -90,7 +157,7 @@ const App = () => {
         >
 
             {   /*********************** Header *********************/   }
-
+            {   /* The following header container should be isolated as a component. **/   }
             <header
                 className={
                     classes.Header
@@ -103,9 +170,7 @@ const App = () => {
                         classes.Logo
                     }
                 />
-                {
-                    navigation()
-                }
+                {   navigation()  }
             </header>
 
             {   /*********************** Header End *****************/   }
@@ -114,18 +179,19 @@ const App = () => {
 
 
             {   /*********************** Main *********************/   }
-
+            {   /* The following main container should be isolated as a component. **/   }
             <main>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content here, content here',
-                making it look like readable English. Many desktop publishing
-                packages and web page editors now use Lorem Ipsum as their
-                default model text, and a search for 'lorem ipsum' will uncover
-                many web sites still in their infancy. Various versions have
-                evolved over the years, sometimes by accident, sometimes
-                on purpose (injected humour and the like).
+                <header className={classes.Main}>
+                    <p className={classes.Title}>
+                        Hey, I am Daniel.
+                        <br />
+                        Full-stack web developer,
+                        <br />
+                        from Chile.
+                    </p>
+                </header>
+                {   resume()    }
+                {   icons()   }
             </main>
 
             {   /*********************** Main End *****************/   }
@@ -134,7 +200,6 @@ const App = () => {
 
 
             {   /*********************** Footer *********************/   }
-
             {   /*********************** Footer End *****************/   }
 
 
