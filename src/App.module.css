@@ -19,10 +19,6 @@
     overflow: auto; /* This allow avoid overflow. */
 }
 
-main {
-    margin: 128px 0 0 0;
-}
-
 @media screen and (max-width: 912px) {
     .App {
         padding: 0 2rem;
@@ -161,6 +157,7 @@ main {
 .Main {
     max-width: 672px;
     /* border: 1px solid white; */
+    margin: 128px 0 0 0;
 }
 
 .Title {
@@ -249,5 +246,29 @@ main {
 .PinkSlim {
     color: rgb(251, 207, 232, 0.9);
     font-weight: 500;
+}
+
+@media screen and (max-width: 912px) {
+    .Main {
+        margin: 32px 0 0 0;
+    }
+
+    .ScreenPlay {
+        margin-right: inherit;
+    }
+    
+    .Highlight {
+        background-color: inherit;
+        padding: inherit;
+    }
+
+    .PinkHighlight {
+        background-color: inherit;
+        padding: inherit;
+    }
+
+    .TopItem, .BottomItem {
+        text-align: left;
+    }
 }
 /************************************************ End Main Section *************************************************/
