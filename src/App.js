@@ -93,6 +93,7 @@ const App = () => {
                         I am passionate about development <span className={classes.ScreenPlay}>—</span>
                         <span className={classes.Highlight}> I love automating things </span>
                         <span className={classes.Point}>,</span>
+                        <br />
                         <span className={classes.Slim}> modern technologies </span> and
                         <span className={classes.Slim}> good developer experience</span> 
                         <span className={classes.Point}>.</span>
@@ -106,7 +107,7 @@ const App = () => {
                         and
                         <span className={classes.PinkSlim}> professionnal</span>
                         <span className={classes.PinkPoint}>.</span>
-                        I am also self-taught, and
+                        I am also self-taught, and <br/>
                         <span className={classes.PinkSlim}> I never stop learning</span>
                         <span className={classes.PinkPoint}>.</span>
                     </p>
