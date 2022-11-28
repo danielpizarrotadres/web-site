@@ -106,7 +106,7 @@ const App = () => {
                         <span className={classes.PinkSlim}> good </span> 
                         and
                         <span className={classes.PinkSlim}> professionnal</span>
-                        <span className={classes.PinkPoint}>.</span>
+                        <span className={classes.PinkPoint}>. </span>
                         I am also self-taught, and <br/>
                         <span className={classes.PinkSlim}> I never stop learning</span>
                         <span className={classes.PinkPoint}>.</span>
