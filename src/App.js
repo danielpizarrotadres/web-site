@@ -15,8 +15,8 @@ const App = () => {
     // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
-    const [size] = useState('xl');
-    const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const [size] = useState('sm');
+    const [toggle, setToggle] = useState({ iconClass: classes.ArrowIcon, show: false });
 
     // useEffect(() => {
     //     console.log('useEffect runs now: ', showMobileMenu);
@@ -28,12 +28,12 @@ const App = () => {
             case 'md': // -> Medium >= 768px
                 return <React.Fragment>
                     <button
+                        id="toggle"
                         className={classes.Toggle}
-                        onClick={handlerOnClick}
                     >
                         Menu
                        <IoIosArrowDown
-                            className={classes.ArrowIcon}
+                            className={toggle.iconClass}
                        />
                     </button>
                 </React.Fragment>;
@@ -146,12 +146,27 @@ const App = () => {
         </React.Fragment>
     };
 
-    const handlerOnClick = () => {
-        setShowMobileMenu(!showMobileMenu);
+    // const handleOnClick = (event) => {
+    //     console.log('event: ', event.target);
+    //     setShowMobileMenu(!showMobileMenu);
+    // };
+
+    const handle = (event) => {
+        // More info about event.target.closest at: 
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+        // https://css-tricks.com/dangers-stopping-event-propagation/
+        const IS_OUTSIDE = event.target.closest('#toggle') ? true : false;
+        console.log('isOutside: ', IS_OUTSIDE);
+        if (IS_OUTSIDE) {
+            setToggle({ iconClass: classes.ClickedArrowIcon, show: !toggle.show });
+            return;
+        }
+        if (!IS_OUTSIDE) setToggle({ iconClass: classes.ArrowIcon, show: false })
     };
 
     return (
         <div
+            onClick={handle}
             className={
                 classes.App
             }
