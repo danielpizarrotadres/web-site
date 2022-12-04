@@ -161,7 +161,7 @@ const App = () => {
             setToggle({ iconClass: classes.ClickedArrowIcon, show: !toggle.show });
             return;
         }
-        if (!IS_OUTSIDE) setToggle({ iconClass: classes.ArrowIcon, show: false })
+        setToggle({ iconClass: classes.ArrowIcon, show: false })
     };
 
     return (
