@@ -92,6 +92,21 @@
     font-size: 12px;
     color: var(--secondary-gray);
     font-weight: 1000;
+
+    transform: rotate(0deg);
+    transition: transform 2s;
+}
+
+.ClickedArrowIcon {
+    position: relative;
+    left: 4px;
+    top: 2px;
+    font-size: 12px;
+    color: var(--secondary-gray);
+    font-weight: 1000;
+
+    transform: rotate(180deg);
+    transition: transform 2s;
 }
 
 .Link:active {
@@ -118,40 +133,6 @@
     border: none;
     font-weight: 600;
 }
-
-/*
-    The following instruction allow:
-
-    When the parent element is hover,
-    The child element will rotate in 180 degrees
-*/
-.Toggle:focus .ArrowIcon {
-    /*transform: rotate(180deg);*/
-    animation-name: arrow;
-    animation-duration: 1s;
-}
-
-/* Test to use keyframes
-
-.Link:active {
-    color: yellow; or var(--primary-pink);
-}
-
-.ArrowIcon:active {
-    color: aqua;
-}
-
-*/
-
-.ClickedArrowIcon {
-    /* some css class */
-}
-
-@keyframes arrow {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(180deg);}
-}
-
 
 @media screen and (max-width: 912px) {
     .Header {
