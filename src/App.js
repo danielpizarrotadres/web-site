@@ -25,6 +25,12 @@ const App = () => {
     //     console.log('useEffect runs now: ', showMobileMenu);
     // }, [showMobileMenu]);
 
+    const menu = () => {
+        return <React.Fragment>
+            <h1>Helo world! I'm a tittle</h1>
+        </React.Fragment>;
+    };
+
     const navigation = () => {
         switch (size) {
             case 'sm': // -> Small >= 576px
