@@ -16,7 +16,10 @@ const App = () => {
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
     const [size] = useState('sm');
-    const [toggle, setToggle] = useState({ iconClass: classes.ArrowIcon, show: false });
+    const [toggle, setToggle] = useState({
+        iconClass: classes.ArrowIcon,
+        show: false
+    });
 
     // useEffect(() => {
     //     console.log('useEffect runs now: ', showMobileMenu);
@@ -155,13 +158,21 @@ const App = () => {
         // More info about event.target.closest at: 
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
         // https://css-tricks.com/dangers-stopping-event-propagation/
+
         const IS_OUTSIDE = event.target.closest('#toggle') ? true : false;
-        console.log('isOutside: ', IS_OUTSIDE);
+
         if (IS_OUTSIDE) {
-            setToggle({ iconClass: classes.ClickedArrowIcon, show: !toggle.show });
+            setToggle({
+                iconClass: classes.ClickedArrowIcon,
+                show: !toggle.show,
+            });
             return;
         }
-        setToggle({ iconClass: classes.ArrowIcon, show: false })
+
+        setToggle({
+            iconClass: classes.ArrowIcon,
+            show: false,
+        });
     };
 
     return (
