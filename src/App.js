@@ -2,7 +2,12 @@ import React, { useEffect, useState } from 'react';
 import classes from './App.module.css'; 
 // import { AiFillHome } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io';
+
+
+// TODO: Try to take a similar photo
 import logo from './logo.jpg';
+
+import screen from './screen.jpeg';
 import arrow from './logo.svg';
 import { BsGithub } from 'react-icons/bs';
 import { TfiTwitterAlt } from 'react-icons/tfi';
@@ -18,12 +23,12 @@ const App = () => {
     const [size] = useState('sm');
     const [toggle, setToggle] = useState({
         iconClass: classes.ArrowIcon,
-        show: false
+        show: false,
     });
 
-    // useEffect(() => {
-    //     console.log('useEffect runs now: ', showMobileMenu);
-    // }, [showMobileMenu]);
+    useEffect(() => {
+        console.log('listening to toggle -> ', toggle);
+    }, [toggle]);
 
     const menu = () => {
         return <React.Fragment>
@@ -39,6 +44,7 @@ const App = () => {
                     <button
                         id="toggle"
                         className={classes.Toggle}
+                        onClick={handleOnClick}
                     >
                         Menu
                        <IoIosArrowDown
@@ -155,35 +161,56 @@ const App = () => {
         </React.Fragment>
     };
 
-    // const handleOnClick = (event) => {
-    //     console.log('event: ', event.target);
-    //     setShowMobileMenu(!showMobileMenu);
-    // };
+    const handleOnClick = () => {
+        console.log('handleOnClick runs');
+        // console.log('toggle.iconClass', toggle.iconClass);
+        // setToggle({
+        //     iconClass: classes.ArrowIcon,
+        //     show: false,
+        // });
+        // const isPressed = toggle.iconClass.includes('ClickedArrowIcon');
+        // console.log('isPressed: ', isPressed);
+        // const dummy = isPressed ? classes.ArrowIcon : classes.ClickedArrowIcon;
+        // console.log('iconClass: ', dummy);
+        // setToggle({
+        //     iconClass: dummy,
+        //     show: !toggle.show,
+        // });
+    };
 
     const handle = (event) => {
         // More info about event.target.closest at: 
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
         // https://css-tricks.com/dangers-stopping-event-propagation/
+        console.log('handle runs now!!!!!');
 
         const IS_OUTSIDE = event.target.closest('#toggle') ? true : false;
 
-        if (IS_OUTSIDE) {
-            setToggle({
-                iconClass: classes.ClickedArrowIcon,
-                show: !toggle.show,
-            });
-            return;
-        }
+        console.log('IS_OUTSIDE: ', IS_OUTSIDE);
+
+        // if (IS_OUTSIDE) {
+        //     setToggle({
+        //         iconClass: classes.ClickedArrowIcon,
+        //         show: !toggle.show,
+        //     });
+        //     return;
+        // }
+
+        // setToggle({
+        //     iconClass: classes.ArrowIcon,
+        //     show: false,
+        // });
 
         setToggle({
-            iconClass: classes.ArrowIcon,
-            show: false,
+            iconClass: toggle.iconClass === 'ArrowIcon'
+                ? classes.ClickedArrowIcon : classes.ArrowIcon,
+            show: !toggle.show,
         });
     };
 
     return (
         <div
-            onClick={handle}
+            onClick={(event) => handle(event)}
             className={
                 classes.App
             }
@@ -198,7 +225,7 @@ const App = () => {
             >
                 <img
                     alt='logo'
-                    src={logo}
+                    src={screen}
                     className={
                         classes.Logo
                     }
