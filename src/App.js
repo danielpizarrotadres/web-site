@@ -206,6 +206,12 @@ const App = () => {
                 {   navigation()  }
             </header>
 
+            {
+                /* The following JSX React Fragment should be isolated as a component  */
+                /* This funcionality allow render the menu navigation on mobile devices */
+            }
+            { toggle.show && menu() }
+
             {   /*********************** Header End *****************/   }
 
 
