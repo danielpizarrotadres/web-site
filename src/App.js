@@ -44,7 +44,6 @@ const App = () => {
                     <button
                         id="toggle"
                         className={classes.Toggle}
-                        onClick={handleOnClick}
                     >
                         Menu
                        <IoIosArrowDown
@@ -161,56 +160,31 @@ const App = () => {
         </React.Fragment>
     };
 
-    const handleOnClick = () => {
-        console.log('handleOnClick runs');
-        // console.log('toggle.iconClass', toggle.iconClass);
-        // setToggle({
-        //     iconClass: classes.ArrowIcon,
-        //     show: false,
-        // });
-        // const isPressed = toggle.iconClass.includes('ClickedArrowIcon');
-        // console.log('isPressed: ', isPressed);
-        // const dummy = isPressed ? classes.ArrowIcon : classes.ClickedArrowIcon;
-        // console.log('iconClass: ', dummy);
-        // setToggle({
-        //     iconClass: dummy,
-        //     show: !toggle.show,
-        // });
-    };
-
-    const handle = (event) => {
+    const handle = () => {
         // More info about event.target.closest at: 
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
         // https://css-tricks.com/dangers-stopping-event-propagation/
-        console.log('handle runs now!!!!!');
+        const currentClass = toggle.iconClass;
+        const defaultClass = classes.ArrowIcon;
+        const toggleIsClicked = currentClass === defaultClass;
 
-        const IS_OUTSIDE = event.target.closest('#toggle') ? true : false;
-
-        console.log('IS_OUTSIDE: ', IS_OUTSIDE);
-
-        // if (IS_OUTSIDE) {
-        //     setToggle({
-        //         iconClass: classes.ClickedArrowIcon,
-        //         show: !toggle.show,
-        //     });
-        //     return;
-        // }
-
-        // setToggle({
-        //     iconClass: classes.ArrowIcon,
-        //     show: false,
-        // });
+        if (toggleIsClicked) {
+            setToggle({
+                iconClass: classes.ClickedArrowIcon,
+                show: true,
+            });
+            return;
+        }
 
         setToggle({
-            iconClass: toggle.iconClass === 'ArrowIcon'
-                ? classes.ClickedArrowIcon : classes.ArrowIcon,
-            show: !toggle.show,
+            iconClass: classes.ArrowIcon,
+            show: false,
         });
     };
 
     return (
         <div
-            onClick={(event) => handle(event)}
+            onClick={handle}
             className={
                 classes.App
             }
