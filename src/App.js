@@ -30,9 +30,11 @@ const App = () => {
         console.log('listening to toggle -> ', toggle);
     }, [toggle]);
 
-    const menu = () => {
+    const mobileNavitation = () => {
         return <React.Fragment>
-            <h1>Helo world! I'm a tittle</h1>
+            <div className={classes.MobileNavigation}>
+                <h1>Helo world! I'm a tittle</h1>
+            </div>
         </React.Fragment>;
     };
 
@@ -211,7 +213,7 @@ const App = () => {
                 /* The following JSX React Fragment should be isolated as a component  */
                 /* This funcionality allow render the menu navigation on mobile devices */
             }
-            { toggle.show && menu() }
+            { /* toggle.show && mobileNavitation() */ }
 
             {   /*********************** Header End *****************/   }
 

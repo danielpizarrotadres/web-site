@@ -134,6 +134,16 @@
     font-weight: 600;
 }
 
+.MobileNavigation {
+    /* some css classes here */
+    background-color: rgb(24, 24, 27);
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, 
+        rgb(39, 39, 42) 0px 0px 0px 1px,
+        rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    position: fixed;
+    /* z-index: 50; */
+}
+
 @media screen and (max-width: 912px) {
     .Header {
         padding: 5rem 0 0 0;
