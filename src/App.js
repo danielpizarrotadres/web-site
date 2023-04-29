@@ -20,7 +20,7 @@ const App = () => {
     // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
-    const [size] = useState('sm');
+    const [size] = useState('lg');
     const [toggle, setToggle] = useState({
         iconClass: classes.ArrowIcon,
         show: false,
@@ -105,6 +105,7 @@ const App = () => {
     const resume = () => {
         return <React.Fragment>
                 <div className={classes.Resume}>
+                    {/*
                     <p className={classes.TopItem}>
                         I am passionate about development <span className={classes.ScreenPlay}>—</span>
                         <span className={classes.Highlight}> I love automating things </span>
@@ -127,6 +128,7 @@ const App = () => {
                         <span className={classes.PinkSlim}> I never stop learning</span>
                         <span className={classes.PinkPoint}>.</span>
                     </p>
+                    */}
                 </div>
         </React.Fragment>;
     };
