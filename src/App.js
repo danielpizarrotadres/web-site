@@ -14,13 +14,15 @@ import { TfiTwitterAlt } from 'react-icons/tfi';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 
+import Navigation from './components/Navigation';
+
 
 const App = () => {
     // TODO:
     // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
-    const [size] = useState('lg');
+    // const [size] = useState('lg');
     const [toggle, setToggle] = useState({
         iconClass: classes.ArrowIcon,
         show: false,
@@ -36,69 +38,6 @@ const App = () => {
                 <h1>Helo world! I'm a tittle</h1>
             </div>
         </React.Fragment>;
-    };
-
-    const navigation = () => {
-        switch (size) {
-            case 'sm': // -> Small >= 576px
-            case 'md': // -> Medium >= 768px
-                return <React.Fragment>
-                    <button
-                        id="toggle"
-                        className={classes.Toggle}
-                    >
-                        Menu
-                       <IoIosArrowDown
-                            className={toggle.iconClass}
-                       />
-                    </button>
-                </React.Fragment>;
-            case 'lg': // -> Large >= 992px
-            case 'xl': // -> Extra Large >= 1200px
-            default:
-                return <React.Fragment>
-                    <nav
-                        className={
-                            classes.Navigation
-                        }
-                    >
-                        <ul
-                            className={
-                                classes.ItemList
-                            }
-                        >
-                            <li
-                                className={
-                                    classes.Item
-                                }
-                            >
-                                <a
-                                    className={
-                                        classes.Link
-                                    }
-                                    href='https://some-url-ref.com'
-                                >
-                                    About
-                                </a>
-                            </li>
-                            <li
-                                className={
-                                    classes.Item
-                                }
-                            >
-                                <a
-                                    className={
-                                        classes.Link
-                                    }
-                                    href='https://some-url-ref.com'
-                                >
-                                    Articles
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </React.Fragment>;
-        }
     };
 
     // returns JSX Fragment with required csss classes.
@@ -208,7 +147,7 @@ const App = () => {
                         classes.Logo
                     }
                 />
-                {   navigation()  }
+                <Navigation />
             </header>
 
             {
