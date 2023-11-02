@@ -14,6 +14,8 @@ import { TfiTwitterAlt } from 'react-icons/tfi';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 
+import Navigation from './components/Navigation';
+
 
 const App = () => {
     // TODO:
@@ -38,13 +40,9 @@ const App = () => {
         </React.Fragment>;
     };
 
-
-
     const handleClickedToggle = () => {
         console.log('handleClickedToggle');
     }
-
-
 
     const navigation = () => {
         switch (size) {
@@ -216,7 +214,7 @@ const App = () => {
                         classes.Logo
                     }
                 />
-                {   navigation()  }
+                <Navigation />
             </header>
 
             {
