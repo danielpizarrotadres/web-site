@@ -20,14 +20,14 @@ const App = () => {
     // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
-    const [size] = useState('lg');
+    const [size] = useState('sm');
     const [toggle, setToggle] = useState({
         iconClass: classes.ArrowIcon,
         show: false,
     });
 
     useEffect(() => {
-        console.log('listening to toggle -> ', toggle);
+     console.log('listening to toggle -> ', toggle);
     }, [toggle]);
 
     const mobileNavitation = () => {
@@ -38,6 +38,14 @@ const App = () => {
         </React.Fragment>;
     };
 
+
+
+    const handleClickedToggle = () => {
+        console.log('handleClickedToggle');
+    }
+
+
+
     const navigation = () => {
         switch (size) {
             case 'sm': // -> Small >= 576px
@@ -46,6 +54,7 @@ const App = () => {
                     <button
                         id="toggle"
                         className={classes.Toggle}
+                        onClick={handleClickedToggle}
                     >
                         Menu
                        <IoIosArrowDown
@@ -169,21 +178,20 @@ const App = () => {
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
         // https://css-tricks.com/dangers-stopping-event-propagation/
         const currentClass = toggle.iconClass;
-        const defaultClass = classes.ArrowIcon;
-        const toggleIsClicked = currentClass === defaultClass;
+        const clickedClass = classes.ClickedArrowIcon;
+        const toggleIsClicked = currentClass === clickedClass;
 
         if (toggleIsClicked) {
             setToggle({
-                iconClass: classes.ClickedArrowIcon,
+                iconClass: classes.ArrowIcon,
                 show: true,
             });
-            return;
         }
 
-        setToggle({
-            iconClass: classes.ArrowIcon,
-            show: false,
-        });
+        // setToggle({
+        //    iconClass: classes.ArrowIcon,
+        //    show: false,
+        //});
     };
 
     return (
