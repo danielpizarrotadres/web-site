@@ -20,7 +20,7 @@ const App = () => {
     // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
-    const [size] = useState('lg');
+    const [size] = useState('sm');
     const [toggle, setToggle] = useState({
         iconClass: classes.ArrowIcon,
         show: false,
@@ -33,7 +33,10 @@ const App = () => {
     const mobileNavitation = () => {
         return <React.Fragment>
             <div className={classes.MobileNavigation}>
-                <h1>Helo world! I'm a tittle</h1>
+                <div className={classes.MobileNavigationHeader}>
+                    Navigation
+                    Icon
+                </div>
             </div>
         </React.Fragment>;
     };
@@ -215,7 +218,7 @@ const App = () => {
                 /* The following JSX React Fragment should be isolated as a component  */
                 /* This funcionality allow render the menu navigation on mobile devices */
             }
-            { /* toggle.show && mobileNavitation() */ }
+            { toggle.show && mobileNavitation() } 
 
             {   /*********************** Header End *****************/   }
 
