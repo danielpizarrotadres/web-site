@@ -3,6 +3,7 @@ body {
   font-family: InterVariable,ui-sans-serif,system-ui,-apple-system;
   /*background-color: #040404;*/
   color: white;
+  background-color: black;
 }
 
 code {
