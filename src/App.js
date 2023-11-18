@@ -53,9 +53,13 @@ const App = () => {
                     </div>
                     <section className={classes.MobileNavigationItems}>
                         <ul>
-                            <li className={classes.MobileNavigationActiveItem}>About</li>
-                            <li>Articles</li>
-                            <li>Projects</li>
+                            <li className={classes.MobileNavigationActiveItem}>
+                                <a>About</a>
+                            </li>
+                            <li>
+                                <a>Articles</a>
+                            </li>
+                            <li><a>Projects</a></li>
                         </ul>
                     </section>
                 </div>

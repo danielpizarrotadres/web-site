@@ -179,6 +179,7 @@
 .MobileNavigationHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .MobileNavigationHeader h2 {
@@ -203,7 +204,12 @@
     color: #a1a1aa;
     font-size: 1rem;
     line-height: 1.5rem;
-    border: 0 solid #e5e7eb;
+    border-bottom: 1px solid rgb(39 39 42/1);
+    cursor: pointer;
+}
+
+.MobileNavigationItems li:last-child {
+    border-bottom: none;
 }
 
 .MobileNavigationItems .MobileNavigationActiveItem {
@@ -211,7 +217,7 @@
 }
 
 .Closing {
-    color: white;
+    color: rgb(228 228 231/1);
 }
 
 @media screen and (max-width: 912px) {
