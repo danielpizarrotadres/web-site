@@ -41,6 +41,24 @@ const App = () => {
         </React.Fragment>;
     };
 
+    const mobileNav = () => {
+        return <React.Fragment>
+            <nav className={classes.MobileNav}>
+                <div className={classes.NavMenu}>
+                    <div className={classes.MobileNavigationHeader}>
+                        Navigation
+                        Icon
+                        <ul>
+                            <li>About</li>
+                            <li>Articles</li>
+                            <li>Projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </React.Fragment>;
+    };
+
     const navigation = () => {
         switch (size) {
             case 'sm': // -> Small >= 576px
@@ -190,69 +208,68 @@ const App = () => {
     };
 
     return (
-        <div
-            onClick={handle}
-            className={
-                classes.App
-            }
-        >
-
-            {   /*********************** Header *********************/   }
-            {   /* The following header container should be isolated as a component. **/   }
-            <header
+        <main>
+            { toggle.show && mobileNav() }
+            <div
+                onClick={handle}
                 className={
-                    classes.Header
+                    classes.App
                 }
             >
-                <img
-                    alt='logo'
-                    src={screen}
+
+                {   /*********************** Header *********************/   }
+                {   /* The following header container should be isolated as a component. **/   }
+                <header
                     className={
-                        classes.Logo
+                        classes.Header
                     }
-                />
-                {   navigation()  }
-            </header>
-
-            {
-                /* The following JSX React Fragment should be isolated as a component  */
-                /* This funcionality allow render the menu navigation on mobile devices */
-            }
-            { toggle.show && mobileNavitation() } 
-
-            {   /*********************** Header End *****************/   }
-
-
-
-
-            {   /*********************** Main *********************/   }
-            {   /* The following main container should be isolated as a component. **/   }
-            <main>
-                <header className={classes.Main}>
-                    <p className={classes.Title}>
-                        Hey, I am Daniel.
-                        <br />
-                        Full-stack web developer,
-                        <br />
-                        from Chile.
-                    </p>
+                >
+                    <img
+                        alt='logo'
+                        src={screen}
+                        className={
+                            classes.Logo
+                        }
+                    />
+                    {   navigation()  }
                 </header>
-                {   resume()    }
-                {   icons()   }
-            </main>
 
-            {   /*********************** Main End *****************/   }
+                {
+                    /* The following JSX React Fragment should be isolated as a component  */
+                    /* This funcionality allow render the menu navigation on mobile devices */
+                }
+                { /* toggle.show && mobileNavitation() */ }
 
-
-
-
-            {   /*********************** Footer *********************/   }
-            {   /*********************** Footer End *****************/   }
+                {   /*********************** Header End *****************/   }
 
 
 
 
-        </div>
+                {   /*********************** Main *********************/   }
+                {   /* The following main container should be isolated as a component. **/   }
+                <main>
+                    <header className={classes.Main}>
+                        <p className={classes.Title}>
+                            Hey, I am Daniel.
+                            <br />
+                            Full-stack web developer,
+                            <br />
+                            from Chile.
+                        </p>
+                    </header>
+                    {   resume()    }
+                    {   icons()   }
+                </main>
+
+                {   /*********************** Main End *****************/   }
+
+
+
+
+                {   /*********************** Footer *********************/   }
+                {   /*********************** Footer End *****************/   }
+            </div>
+        </main>
     );
 }
 
