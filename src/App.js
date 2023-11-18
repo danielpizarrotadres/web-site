@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import classes from './App.module.css'; 
 // import { AiFillHome } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io';
-
+import { IoMdClose } from "react-icons/io";
 
 // TODO: Try to take a similar photo
 import logo from './logo.jpg';
 
 import screen from './screen.jpeg';
+import closing from './closing.svg'
 import arrow from './logo.svg';
 import { BsGithub } from 'react-icons/bs';
 import { TfiTwitterAlt } from 'react-icons/tfi';
@@ -46,14 +47,17 @@ const App = () => {
             <nav className={classes.MobileNav}>
                 <div className={classes.NavMenu}>
                     <div className={classes.MobileNavigationHeader}>
-                        Navigation
-                        Icon
+                        <h2>Navigation</h2>
+                        { /* <img alt='closing' src={closing} /> */ }
+                        <IoMdClose className={classes.Closing} />
+                    </div>
+                    <section className={classes.MobileNavigationItems}>
                         <ul>
-                            <li>About</li>
+                            <li className={classes.MobileNavigationActiveItem}>About</li>
                             <li>Articles</li>
                             <li>Projects</li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </nav>
         </React.Fragment>;

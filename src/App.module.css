@@ -172,11 +172,46 @@
     top: 8.5rem;
     border: 1px solid rgb(39 39 42/1);
     opacity: 1;
+    text-align: left;
+    padding: 12px;
 }
 
 .MobileNavigationHeader {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.MobileNavigationHeader h2 {
+    color: rgb(82 82 91/1);
+    letter-spacing: .05em;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+.MobileNavigationHeader img {
+    color: white;
+}
+
+.MobileNavigationItems {
+    margin-top: 12px;
+}
+
+.MobileNavigationItems li {
+    padding: .5rem 0;
+    color: #a1a1aa;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border: 0 solid #e5e7eb;
+}
+
+.MobileNavigationItems .MobileNavigationActiveItem {
+    color: rgb(228 228 231/1);
+}
+
+.Closing {
+    color: white;
 }
 
 @media screen and (max-width: 912px) {
