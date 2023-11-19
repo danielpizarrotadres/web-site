@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu:wght@300&display=swap');
 body {
   margin: 0;
-  font-family: InterVariable,ui-sans-serif,system-ui,-apple-system;
+  font-family: 'Ubuntu', sans-serif;
   /*background-color: #040404;*/
   color: white;
   background-color: black;

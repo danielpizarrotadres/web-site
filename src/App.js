@@ -28,7 +28,7 @@ const App = () => {
     });
 
     useEffect(() => {
-        console.log('listening to toggle -> ', toggle);
+        // console.log('listening to toggle -> ', toggle);
     }, [toggle]);
 
     const mobileNavitation = () => {
@@ -49,7 +49,7 @@ const App = () => {
                     <div className={classes.MobileNavigationHeader}>
                         <h2>Navigation</h2>
                         { /* <img alt='closing' src={closing} /> */ }
-                        <IoMdClose className={classes.Closing} />
+                        <IoMdClose className={classes.Closing} onClick={handleOnClick} />
                     </div>
                     <section className={classes.MobileNavigationItems}>
                         <ul>
@@ -75,6 +75,7 @@ const App = () => {
                     <button
                         id="toggle"
                         className={classes.Toggle}
+                        onClick={handleOnClick}
                     >
                         Menu
                        <IoIosArrowDown
@@ -197,31 +198,47 @@ const App = () => {
         // More info about event.target.closest at: 
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
         // https://css-tricks.com/dangers-stopping-event-propagation/
-        const currentClass = toggle.iconClass;
-        const defaultClass = classes.ArrowIcon;
-        const toggleIsClicked = currentClass === defaultClass;
+        // const currentClass = toggle.iconClass;
+        // const defaultClass = classes.ArrowIcon;
+        // const toggleIsClicked = currentClass === defaultClass;
 
-        if (toggleIsClicked) {
+        // if (toggleIsClicked) {
+        //     setToggle({
+        //         iconClass: classes.ClickedArrowIcon,
+        //         show: true,
+        //     });
+        //     return;
+        // }
+
+        // setToggle({
+        //     iconClass: classes.ArrowIcon,
+        //     show: false,
+        // });
+        if (toggle.show) {
             setToggle({
-                iconClass: classes.ClickedArrowIcon,
-                show: true,
+                iconClass: classes.ArrowIcon,
+                show: false,
             });
-            return;
         }
+    };
 
+    const handleOnClick = () => {
         setToggle({
-            iconClass: classes.ArrowIcon,
-            show: false,
+            show: !toggle.show,
+            iconClass: toggle.iconClass.includes('Clicked')
+                ? classes.ArrowIcon
+                : classes.ClickedArrowIcon,
         });
     };
 
     return (
         <main>
             { toggle.show && mobileNav() }
+            { /* onClick={handle} */ }
             <div
                 onClick={handle}
                 className={
-                    classes.App
+                    `${classes.App} ${toggle.show ? classes.AppBlured : ''}`
                 }
             >
 
