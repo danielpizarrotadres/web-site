@@ -168,25 +168,29 @@ const App = () => {
             <div className={classes.IconContainer}>
                 <a
                     className={classes.Icon}
-                    href='https://some-url-ref.com'
+                    href='https://github.com/danielpizarrotadres'
+                    target="_blank"
                 >
                     <BsGithub />
                 </a>
                 <a
                     className={classes.Icon}
-                    href='https://some-url-ref.com'
+                    href='https://twitter.com/danitadres'
+                    target="_blank"
                 >
                     <TfiTwitterAlt />
                 </a>
                 <a
                     className={classes.Icon}
-                    href='https://some-url-ref.com'
+                    href='https://www.linkedin.com/in/danieldev1999/'
+                    target="_blank"
                 >
                     <AiFillLinkedin />
                 </a>
                 <a
                     className={classes.Icon}
                     href='https://some-url-ref.com'
+                    target="_blank"
                 >
                     <MdEmail />
                 </a>
@@ -277,7 +281,7 @@ const App = () => {
                         <p className={classes.Title}>
                             Hey, I am Daniel.
                             <br />
-                            Full-stack web developer,
+                            Mobile & web developer,
                             <br />
                             from Chile.
                         </p>
