@@ -11,12 +11,14 @@
 
 .App {
     height: 100vh;
-    background-image: none; /* url('https://innocenzi.dev/assets/background.90c96182.webp'); */
+    background-image: none;
+    /* url('https://innocenzi.dev/assets/background.90c96182.webp'); */
     background-color: var(--primary-black);
     background-repeat: no-repeat;
     padding: 0 278px;
     font-family: inherit;
-    overflow: auto; /* This allow avoid overflow. */
+    overflow: auto;
+    /* This allow avoid overflow. */
 }
 
 @media screen and (max-width: 912px) {
@@ -142,7 +144,7 @@
 .MobileNavigation {
     background-color: #18181b;
     border-radius: 0.75rem;
-    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, 
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px,
         rgb(39, 39, 42) 0px 0px 0px 1px,
         rgba(0, 0, 0, 0) 0px 0px 0px 0px;
     position: fixed;
@@ -152,17 +154,13 @@
     width: calc(100% - 100px);
 }
 
+/* Mobile Nav container */
 .MobileNav {
-    /*border: 2px solid red;*/
     position: relative;
     text-align: center;
-    /*background-color: #18181b;
-    position: absolute;
-    z-index: 1;
-    border-radius: 0.75rem;
-    width: calc(100% - 100px);
-    margin: 0 auto;*/
 }
+
+/* End Mobile Nav container */
 
 .NavMenu {
     position: absolute;
@@ -277,7 +275,7 @@
     color: rgb(161, 161, 170);
     display: flex;
     margin: 24px 0 0 0;
-    /* border: 1px solid blueviolet */ 
+    /* border: 1px solid blueviolet */
     max-width: 672px;
 }
 
@@ -312,7 +310,8 @@
     font-weight: 500;
 }
 
-.Point, .PinkPoint {
+.Point,
+.PinkPoint {
     font-weight: 900;
 }
 
@@ -341,7 +340,7 @@
     .ScreenPlay {
         margin-right: inherit;
     }
-    
+
     .Highlight {
         background-color: inherit;
         padding: inherit;
@@ -352,8 +351,10 @@
         padding: inherit;
     }
 
-    .TopItem, .BottomItem {
+    .TopItem,
+    .BottomItem {
         text-align: left;
     }
 }
+
 /************************************************ End Main Section *************************************************/

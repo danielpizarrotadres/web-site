@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import classes from './App.module.css'; 
+import classes from './App.module.css';
 // import { AiFillHome } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoMdClose } from "react-icons/io";
@@ -48,7 +48,7 @@ const App = () => {
                 <div className={classes.NavMenu}>
                     <div className={classes.MobileNavigationHeader}>
                         <h2>Navigation</h2>
-                        { /* <img alt='closing' src={closing} /> */ }
+                        { /* <img alt='closing' src={closing} /> */}
                         <IoMdClose className={classes.Closing} onClick={handleOnClick} />
                     </div>
                     <section className={classes.MobileNavigationItems}>
@@ -78,9 +78,9 @@ const App = () => {
                         onClick={handleOnClick}
                     >
                         Menu
-                       <IoIosArrowDown
+                        <IoIosArrowDown
                             className={toggle.iconClass}
-                       />
+                        />
                     </button>
                 </React.Fragment>;
             case 'lg': // -> Large >= 992px
@@ -134,8 +134,8 @@ const App = () => {
     // returns JSX Fragment with required csss classes.
     const resume = () => {
         return <React.Fragment>
-                <div className={classes.Resume}>
-                    {/*
+            <div className={classes.Resume}>
+                {/*
                     <p className={classes.TopItem}>
                         I am passionate about development <span className={classes.ScreenPlay}>—</span>
                         <span className={classes.Highlight}> I love automating things </span>
@@ -159,38 +159,38 @@ const App = () => {
                         <span className={classes.PinkPoint}>.</span>
                     </p>
                     */}
-                </div>
+            </div>
         </React.Fragment>;
     };
 
     const icons = () => {
         return <React.Fragment>
-                <div className={classes.IconContainer}>
-                    <a
-                        className={classes.Icon}
-                        href='https://some-url-ref.com'
-                    >
-                        <BsGithub />
-                    </a>
-                    <a
-                        className={classes.Icon}
-                        href='https://some-url-ref.com'
-                    >
-                        <TfiTwitterAlt />
-                    </a>
-                    <a
-                        className={classes.Icon}
-                        href='https://some-url-ref.com'
-                    >
-                        <AiFillLinkedin />
-                    </a>
-                    <a
-                        className={classes.Icon}
-                        href='https://some-url-ref.com'
-                    >
-                        <MdEmail />
-                    </a>
-                </div>
+            <div className={classes.IconContainer}>
+                <a
+                    className={classes.Icon}
+                    href='https://some-url-ref.com'
+                >
+                    <BsGithub />
+                </a>
+                <a
+                    className={classes.Icon}
+                    href='https://some-url-ref.com'
+                >
+                    <TfiTwitterAlt />
+                </a>
+                <a
+                    className={classes.Icon}
+                    href='https://some-url-ref.com'
+                >
+                    <AiFillLinkedin />
+                </a>
+                <a
+                    className={classes.Icon}
+                    href='https://some-url-ref.com'
+                >
+                    <MdEmail />
+                </a>
+            </div>
         </React.Fragment>
     };
 
@@ -233,8 +233,8 @@ const App = () => {
 
     return (
         <main>
-            { toggle.show && mobileNav() }
-            { /* onClick={handle} */ }
+            {toggle.show && mobileNav()}
+            { /* onClick={handle} */}
             <div
                 onClick={handle}
                 className={
@@ -242,8 +242,8 @@ const App = () => {
                 }
             >
 
-                {   /*********************** Header *********************/   }
-                {   /* The following header container should be isolated as a component. **/   }
+                {   /*********************** Header *********************/}
+                {   /* The following header container should be isolated as a component. **/}
                 <header
                     className={
                         classes.Header
@@ -256,22 +256,22 @@ const App = () => {
                             classes.Logo
                         }
                     />
-                    {   navigation()  }
+                    {navigation()}
                 </header>
 
                 {
                     /* The following JSX React Fragment should be isolated as a component  */
                     /* This funcionality allow render the menu navigation on mobile devices */
                 }
-                { /* toggle.show && mobileNavitation() */ }
+                { /* toggle.show && mobileNavitation() */}
 
-                {   /*********************** Header End *****************/   }
-
-
+                {   /*********************** Header End *****************/}
 
 
-                {   /*********************** Main *********************/   }
-                {   /* The following main container should be isolated as a component. **/   }
+
+
+                {   /*********************** Main *********************/}
+                {   /* The following main container should be isolated as a component. **/}
                 <main>
                     <header className={classes.Main}>
                         <p className={classes.Title}>
@@ -282,17 +282,17 @@ const App = () => {
                             from Chile.
                         </p>
                     </header>
-                    {   resume()    }
-                    {   icons()   }
+                    {resume()}
+                    {icons()}
                 </main>
 
-                {   /*********************** Main End *****************/   }
+                {   /*********************** Main End *****************/}
 
 
 
 
-                {   /*********************** Footer *********************/   }
-                {   /*********************** Footer End *****************/   }
+                {   /*********************** Footer *********************/}
+                {   /*********************** Footer End *****************/}
             </div>
         </main>
     );
