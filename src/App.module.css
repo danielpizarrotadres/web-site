@@ -368,12 +368,7 @@
 footer {
     display: flex;
     justify-content: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    width: calc(100% - 100px);
+    margin: 2rem 0;
 }
 
 .LettersMadeWith {

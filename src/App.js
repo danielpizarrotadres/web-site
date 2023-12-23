@@ -288,13 +288,11 @@ const App = () => {
                     </header>
                     {resume()}
                     {icons()}
-                    {/* TODO: Uncomment when the main content is completed
-                        <footer>
-                            <span className={classes.LettersMadeWith}>
-                                Made with <FaHeart className={classes.IconMadeWith} /> by Dani
-                            </span>
-                        </footer>
-                    */}
+                    <footer>
+                        <span className={classes.LettersMadeWith}>
+                            Made with <FaHeart className={classes.IconMadeWith} /> by Dani
+                        </span>
+                    </footer>
                 </main>
 
                 {   /*********************** Main End *****************/}
