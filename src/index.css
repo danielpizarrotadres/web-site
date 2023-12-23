@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Nunito', sans-serif;
   /*background-color: #040404;*/
   color: white;
   background-color: black;
@@ -12,7 +13,8 @@ code {
     monospace;
 }
 
-h1, p {
+h1,
+p {
   margin: 0;
 }
 
@@ -25,4 +27,3 @@ ul {
 a {
   text-decoration: none;
 }
-

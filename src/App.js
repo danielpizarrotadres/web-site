@@ -280,11 +280,13 @@ const App = () => {
                 <main>
                     <header className={classes.Main}>
                         <p className={classes.Title}>
-                            Hey, I am Daniel.
+                            Hi, I am Daniel
                             <br />
-                            Mobile & web developer,
-                            <br />
-                            from Chile.
+                            <span className={classes.SubTitle}>
+                                Mobile and web developer,
+                                <br />
+                                from Chile.
+                            </span>
                         </p>
                     </header>
                     {resume()}
