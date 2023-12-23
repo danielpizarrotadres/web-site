@@ -137,7 +137,7 @@ const App = () => {
         return <React.Fragment>
             <div className={classes.Resume}>
                 <p className={classes.TopItem}>
-                    I am passionate about Mobile and web development <span className={classes.ScreenPlay}>—</span>
+                    I am passionate about web and Mobile development <span className={classes.ScreenPlay}>—</span>
                     <span className={classes.Highlight}> I love automating things </span>
                     <span className={classes.Point}>, and</span>
                     <br />
@@ -277,7 +277,7 @@ const App = () => {
                 <main>
                     <header className={classes.Main}>
                         <p className={classes.Title}>
-                            Hi, I am Daniel
+                            Hi, I am Dani
                             <br />
                             <span className={classes.SubTitle}>
                                 Mobile and web developer,
