@@ -136,30 +136,27 @@ const App = () => {
     const resume = () => {
         return <React.Fragment>
             <div className={classes.Resume}>
-                {/*
-                    <p className={classes.TopItem}>
-                        I am passionate about development <span className={classes.ScreenPlay}>—</span>
-                        <span className={classes.Highlight}> I love automating things </span>
-                        <span className={classes.Point}>,</span>
-                        <br />
-                        <span className={classes.Slim}> modern technologies </span> and
-                        <span className={classes.Slim}> good developer experience</span> 
-                        <span className={classes.Point}>.</span>
-                    </p>
-                    <p className={classes.BottomItem}>
-                        <span className={classes.PinkHighlight}>I am a perfectionist</span>
-                        <span className={classes.PinkPoint}>. </span>  
-                        I pay attention to details,
-                        because I love when things look
-                        <span className={classes.PinkSlim}> good </span> 
-                        and
-                        <span className={classes.PinkSlim}> professionnal</span>
-                        <span className={classes.PinkPoint}>. </span>
-                        I am also self-taught, and <br/>
-                        <span className={classes.PinkSlim}> I never stop learning</span>
-                        <span className={classes.PinkPoint}>.</span>
-                    </p>
-                    */}
+                <p className={classes.TopItem}>
+                    I am passionate about Mobile and web development <span className={classes.ScreenPlay}>—</span>
+                    <span className={classes.Highlight}> I love automating things </span>
+                    <span className={classes.Point}>, and</span>
+                    <br />
+                    <span className={classes.Slim}>learn </span>
+                    <span className={classes.Point}>new stuffs.</span>
+                </p>
+                <p className={classes.BottomItem}>
+                    <span className={classes.PinkHighlight}>I am passionate about what I do and I take it seriously</span>
+                    <span className={classes.PinkPoint}>. </span>
+                    I pay attention to details,
+                    because I love when things look
+                    <span className={classes.PinkSlim}> good </span>
+                    and
+                    <span className={classes.PinkSlim}> professionnal</span>
+                    <span className={classes.PinkPoint}>. </span>
+                    I am also self-taught, and <br />
+                    <span className={classes.PinkSlim}> I never stop learning</span>
+                    <span className={classes.PinkPoint}>.</span>
+                </p>
             </div>
         </React.Fragment>;
     };
