@@ -11,17 +11,23 @@
 
 .App {
     height: 100vh;
-    background-image: none; /* url('https://innocenzi.dev/assets/background.90c96182.webp'); */
+    background-image: none;
+    /* url('https://innocenzi.dev/assets/background.90c96182.webp'); */
     background-color: var(--primary-black);
     background-repeat: no-repeat;
     padding: 0 278px;
     font-family: inherit;
-    overflow: auto; /* This allow avoid overflow. */
+    overflow: auto;
+    /* This allow avoid overflow. */
 }
 
 @media screen and (max-width: 912px) {
     .App {
         padding: 0 32px;
+        /* filter: blur(4px); */
+    }
+
+    .AppBlured {
         filter: blur(4px);
     }
 }
@@ -136,10 +142,9 @@
 }
 
 .MobileNavigation {
-    /* some css classes here */
     background-color: #18181b;
     border-radius: 0.75rem;
-    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, 
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px,
         rgb(39, 39, 42) 0px 0px 0px 1px,
         rgba(0, 0, 0, 0) 0px 0px 0px 0px;
     position: fixed;
@@ -147,14 +152,75 @@
     /* height: 500px; */
     padding: 16px;
     width: calc(100% - 100px);
+}
 
-    /* transform: rotate(180deg); */
-    /* transition: transform 1s; */
+/* Mobile Nav container */
+.MobileNav {
+    position: relative;
+    text-align: center;
+}
+
+/* End Mobile Nav container */
+
+.NavMenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: calc(100% - 100px);
+    background-color: #18181b;
+    border-radius: 0.75rem;
+    z-index: 1;
+    top: 8.5rem;
+    border: 1px solid rgb(39 39 42/1);
+    opacity: 1;
+    text-align: left;
+    padding: 12px;
 }
 
 .MobileNavigationHeader {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MobileNavigationHeader h2 {
+    color: rgb(82 82 91/1);
+    letter-spacing: .05em;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+.MobileNavigationHeader img {
+    color: white;
+}
+
+.MobileNavigationItems {
+    margin-top: 12px;
+}
+
+.MobileNavigationItems li {
+    padding: .5rem 0;
+    color: #a1a1aa;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid rgb(39 39 42/1);
+    cursor: pointer;
+}
+
+.MobileNavigationItems li:last-child {
+    border-bottom: none;
+}
+
+.MobileNavigationItems .MobileNavigationActiveItem {
+    color: rgb(228 228 231/1);
+}
+
+.Closing {
+    color: rgb(228 228 231/1);
+    cursor: pointer;
 }
 
 @media screen and (max-width: 912px) {
@@ -209,7 +275,7 @@
     color: rgb(161, 161, 170);
     display: flex;
     margin: 24px 0 0 0;
-    /* border: 1px solid blueviolet */ 
+    /* border: 1px solid blueviolet */
     max-width: 672px;
 }
 
@@ -244,7 +310,8 @@
     font-weight: 500;
 }
 
-.Point, .PinkPoint {
+.Point,
+.PinkPoint {
     font-weight: 900;
 }
 
@@ -273,7 +340,7 @@
     .ScreenPlay {
         margin-right: inherit;
     }
-    
+
     .Highlight {
         background-color: inherit;
         padding: inherit;
@@ -284,8 +351,10 @@
         padding: inherit;
     }
 
-    .TopItem, .BottomItem {
+    .TopItem,
+    .BottomItem {
         text-align: left;
     }
 }
+
 /************************************************ End Main Section *************************************************/

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import classes from './App.module.css'; 
+import classes from './App.module.css';
 // import { AiFillHome } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io';
-
+import { IoMdClose } from "react-icons/io";
 
 // TODO: Try to take a similar photo
 import logo from './logo.jpg';
 
 import screen from './screen.jpeg';
+import closing from './closing.svg'
 import arrow from './logo.svg';
 import { BsGithub } from 'react-icons/bs';
 import { TfiTwitterAlt } from 'react-icons/tfi';
@@ -27,7 +28,7 @@ const App = () => {
     });
 
     useEffect(() => {
-        console.log('listening to toggle -> ', toggle);
+        // console.log('listening to toggle -> ', toggle);
     }, [toggle]);
 
     const mobileNavitation = () => {
@@ -41,6 +42,31 @@ const App = () => {
         </React.Fragment>;
     };
 
+    const mobileNav = () => {
+        return <React.Fragment>
+            <nav className={classes.MobileNav}>
+                <div className={classes.NavMenu}>
+                    <div className={classes.MobileNavigationHeader}>
+                        <h2>Navigation</h2>
+                        { /* <img alt='closing' src={closing} /> */}
+                        <IoMdClose className={classes.Closing} onClick={handleOnClick} />
+                    </div>
+                    <section className={classes.MobileNavigationItems}>
+                        <ul>
+                            <li className={classes.MobileNavigationActiveItem}>
+                                <a>About</a>
+                            </li>
+                            <li>
+                                <a>Articles</a>
+                            </li>
+                            <li><a>Projects</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </nav>
+        </React.Fragment>;
+    };
+
     const navigation = () => {
         switch (size) {
             case 'sm': // -> Small >= 576px
@@ -49,11 +75,12 @@ const App = () => {
                     <button
                         id="toggle"
                         className={classes.Toggle}
+                        onClick={handleOnClick}
                     >
                         Menu
-                       <IoIosArrowDown
+                        <IoIosArrowDown
                             className={toggle.iconClass}
-                       />
+                        />
                     </button>
                 </React.Fragment>;
             case 'lg': // -> Large >= 992px
@@ -107,8 +134,8 @@ const App = () => {
     // returns JSX Fragment with required csss classes.
     const resume = () => {
         return <React.Fragment>
-                <div className={classes.Resume}>
-                    {/*
+            <div className={classes.Resume}>
+                {/*
                     <p className={classes.TopItem}>
                         I am passionate about development <span className={classes.ScreenPlay}>—</span>
                         <span className={classes.Highlight}> I love automating things </span>
@@ -132,38 +159,38 @@ const App = () => {
                         <span className={classes.PinkPoint}>.</span>
                     </p>
                     */}
-                </div>
+            </div>
         </React.Fragment>;
     };
 
     const icons = () => {
         return <React.Fragment>
-                <div className={classes.IconContainer}>
-                    <a
-                        className={classes.Icon}
-                        href='https://some-url-ref.com'
-                    >
-                        <BsGithub />
-                    </a>
-                    <a
-                        className={classes.Icon}
-                        href='https://some-url-ref.com'
-                    >
-                        <TfiTwitterAlt />
-                    </a>
-                    <a
-                        className={classes.Icon}
-                        href='https://some-url-ref.com'
-                    >
-                        <AiFillLinkedin />
-                    </a>
-                    <a
-                        className={classes.Icon}
-                        href='https://some-url-ref.com'
-                    >
-                        <MdEmail />
-                    </a>
-                </div>
+            <div className={classes.IconContainer}>
+                <a
+                    className={classes.Icon}
+                    href='https://some-url-ref.com'
+                >
+                    <BsGithub />
+                </a>
+                <a
+                    className={classes.Icon}
+                    href='https://some-url-ref.com'
+                >
+                    <TfiTwitterAlt />
+                </a>
+                <a
+                    className={classes.Icon}
+                    href='https://some-url-ref.com'
+                >
+                    <AiFillLinkedin />
+                </a>
+                <a
+                    className={classes.Icon}
+                    href='https://some-url-ref.com'
+                >
+                    <MdEmail />
+                </a>
+            </div>
         </React.Fragment>
     };
 
@@ -171,88 +198,103 @@ const App = () => {
         // More info about event.target.closest at: 
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
         // https://css-tricks.com/dangers-stopping-event-propagation/
-        const currentClass = toggle.iconClass;
-        const defaultClass = classes.ArrowIcon;
-        const toggleIsClicked = currentClass === defaultClass;
+        // const currentClass = toggle.iconClass;
+        // const defaultClass = classes.ArrowIcon;
+        // const toggleIsClicked = currentClass === defaultClass;
 
-        if (toggleIsClicked) {
+        // if (toggleIsClicked) {
+        //     setToggle({
+        //         iconClass: classes.ClickedArrowIcon,
+        //         show: true,
+        //     });
+        //     return;
+        // }
+
+        // setToggle({
+        //     iconClass: classes.ArrowIcon,
+        //     show: false,
+        // });
+        if (toggle.show) {
             setToggle({
-                iconClass: classes.ClickedArrowIcon,
-                show: true,
+                iconClass: classes.ArrowIcon,
+                show: false,
             });
-            return;
         }
+    };
 
+    const handleOnClick = () => {
         setToggle({
-            iconClass: classes.ArrowIcon,
-            show: false,
+            show: !toggle.show,
+            iconClass: toggle.iconClass.includes('Clicked')
+                ? classes.ArrowIcon
+                : classes.ClickedArrowIcon,
         });
     };
 
     return (
-        <div
-            onClick={handle}
-            className={
-                classes.App
-            }
-        >
-
-            {   /*********************** Header *********************/   }
-            {   /* The following header container should be isolated as a component. **/   }
-            <header
+        <main>
+            {toggle.show && mobileNav()}
+            { /* onClick={handle} */}
+            <div
+                onClick={handle}
                 className={
-                    classes.Header
+                    `${classes.App} ${toggle.show ? classes.AppBlured : ''}`
                 }
             >
-                <img
-                    alt='logo'
-                    src={screen}
+
+                {   /*********************** Header *********************/}
+                {   /* The following header container should be isolated as a component. **/}
+                <header
                     className={
-                        classes.Logo
+                        classes.Header
                     }
-                />
-                {   navigation()  }
-            </header>
-
-            {
-                /* The following JSX React Fragment should be isolated as a component  */
-                /* This funcionality allow render the menu navigation on mobile devices */
-            }
-            { toggle.show && mobileNavitation() } 
-
-            {   /*********************** Header End *****************/   }
-
-
-
-
-            {   /*********************** Main *********************/   }
-            {   /* The following main container should be isolated as a component. **/   }
-            <main>
-                <header className={classes.Main}>
-                    <p className={classes.Title}>
-                        Hey, I am Daniel.
-                        <br />
-                        Full-stack web developer,
-                        <br />
-                        from Chile.
-                    </p>
+                >
+                    <img
+                        alt='logo'
+                        src={screen}
+                        className={
+                            classes.Logo
+                        }
+                    />
+                    {navigation()}
                 </header>
-                {   resume()    }
-                {   icons()   }
-            </main>
 
-            {   /*********************** Main End *****************/   }
+                {
+                    /* The following JSX React Fragment should be isolated as a component  */
+                    /* This funcionality allow render the menu navigation on mobile devices */
+                }
+                { /* toggle.show && mobileNavitation() */}
 
-
-
-
-            {   /*********************** Footer *********************/   }
-            {   /*********************** Footer End *****************/   }
+                {   /*********************** Header End *****************/}
 
 
 
 
-        </div>
+                {   /*********************** Main *********************/}
+                {   /* The following main container should be isolated as a component. **/}
+                <main>
+                    <header className={classes.Main}>
+                        <p className={classes.Title}>
+                            Hey, I am Daniel.
+                            <br />
+                            Full-stack web developer,
+                            <br />
+                            from Chile.
+                        </p>
+                    </header>
+                    {resume()}
+                    {icons()}
+                </main>
+
+                {   /*********************** Main End *****************/}
+
+
+
+
+                {   /*********************** Footer *********************/}
+                {   /*********************** Footer End *****************/}
+            </div>
+        </main>
     );
 }
 
