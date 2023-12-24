@@ -208,6 +208,51 @@ const App = () => {
         </React.Fragment>
     }
 
+    const stack = () => {
+        return <React.Fragment>
+            <div className={classes.StackContainer}>
+                <h1 className={classes.StackContainerTitle}>Stack</h1>
+
+                <div className={classes.SubTitleContainer}>
+                    <h5 className={classes.StackContainerSubTitle}>
+                        Here are the tools I'm most productive with
+                    </h5>
+                </div>
+
+                <section className={classes.StackContainerTechnologies}>
+                    <div className={classes.StackContainerTechnologiesItem}>
+                        <div className={classes.StackContainerTechnologiesItemIcon}>
+                            <SiExpress className={classes.StackContainerIcon} />
+                        </div>
+                        <div className={classes.StackContainerTechnologiesItemDescription}>
+                            <h4 className={classes.StackContainerTechnologiesItemDescriptionTitle}>
+                                EXPRESS
+                            </h4>
+                            <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
+                                Express is a minimal and flexible Node.js web application framework
+                                that provides a robust set of features for web and mobile applications.
+                            </span>
+                        </div>
+                    </div>
+                    <div className={classes.StackContainerTechnologiesItem}>
+                        <div className={classes.StackContainerTechnologiesItemIcon}>
+                            <FaReact className={classes.StackContainerIcon} />
+                        </div>
+                        <div className={classes.StackContainerTechnologiesItemDescription}>
+                            <h4 className={classes.StackContainerTechnologiesItemDescriptionTitle}>
+                                REACT
+                            </h4>
+                            <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
+                                React is the library for web and native user interfaces.
+                                Build user interfaces out of individual pieces called components written in JavaScript.
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </React.Fragment>
+    }
+
     const handle = () => {
         // More info about event.target.closest at: 
         // https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
@@ -300,46 +345,7 @@ const App = () => {
                     </header>
                     {resume()}
                     {icons()}
-                    <div className={classes.StackContainer}>
-                        <h1 className={classes.StackContainerTitle}>Stack</h1>
-
-                        <div className={classes.SubTitleContainer}>
-                            <h5 className={classes.StackContainerSubTitle}>
-                                Here are the tools I'm most productive with
-                            </h5>
-                        </div>
-
-                        <section className={classes.StackContainerTechnologies}>
-                            <div className={classes.StackContainerTechnologiesItem}>
-                                <div className={classes.StackContainerTechnologiesItemIcon}>
-                                    <SiExpress className={classes.StackContainerIcon} />
-                                </div>
-                                <div className={classes.StackContainerTechnologiesItemDescription}>
-                                    <h4 className={classes.StackContainerTechnologiesItemDescriptionTitle}>
-                                        EXPRESS
-                                    </h4>
-                                    <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
-                                        Express is a minimal and flexible Node.js web application framework
-                                        that provides a robust set of features for web and mobile applications.
-                                    </span>
-                                </div>
-                            </div>
-                            <div className={classes.StackContainerTechnologiesItem}>
-                                <div className={classes.StackContainerTechnologiesItemIcon}>
-                                    <FaReact className={classes.StackContainerIcon} />
-                                </div>
-                                <div className={classes.StackContainerTechnologiesItemDescription}>
-                                    <h4 className={classes.StackContainerTechnologiesItemDescriptionTitle}>
-                                        REACT
-                                    </h4>
-                                    <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
-                                        React is the library for web and native user interfaces.
-                                        Build user interfaces out of individual pieces called components written in JavaScript.
-                                    </span>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                    {stack()}
                     {footer()}
                 </main>
 
