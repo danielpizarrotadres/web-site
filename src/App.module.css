@@ -391,10 +391,14 @@
 .StackContainerTechnologiesItem {
     width: 100%;
     margin-bottom: 2rem;
+    padding: 1rem;
+    transition: background-color 1s;
+    cursor: pointer;
+    border-radius: 18px;
 }
 
 .StackContainerTechnologiesItem:hover {
-    background-color: black;
+    background-color: #27272a66;
 }
 
 .StackContainerTechnologiesItemIcon {
