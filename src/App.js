@@ -169,28 +169,28 @@ const App = () => {
                 <a
                     className={classes.Icon}
                     href='https://github.com/danielpizarrotadres'
-                    target="_blank"
+                    target='_blank'
                 >
                     <BsGithub />
                 </a>
                 <a
                     className={classes.Icon}
                     href='https://twitter.com/danitadres'
-                    target="_blank"
+                    target='_blank'
                 >
                     <TfiTwitterAlt />
                 </a>
                 <a
                     className={classes.Icon}
                     href='https://www.linkedin.com/in/danieldev1999/'
-                    target="_blank"
+                    target='_blank'
                 >
                     <AiFillLinkedin />
                 </a>
                 <a
                     className={classes.Icon}
                     href='https://some-url-ref.com'
-                    target="_blank"
+                    target='_blank'
                 >
                     <MdEmail />
                 </a>
@@ -234,6 +234,7 @@ const App = () => {
                             </span>
                         </div>
                     </div>
+
                     <div className={classes.StackContainerTechnologiesItem}>
                         <div className={classes.StackContainerTechnologiesItemIcon}>
                             <FaReact className={classes.StackContainerIcon} />
@@ -248,6 +249,7 @@ const App = () => {
                             </span>
                         </div>
                     </div>
+
                 </section>
             </div>
         </React.Fragment>

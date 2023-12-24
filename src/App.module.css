@@ -290,6 +290,7 @@
     margin: 0 22px 0 0;
 }
 
+/* TODO: Fix this hover. Doesn't work*/
 .Icon:hover {
     color: var(--primary-white);
 }
