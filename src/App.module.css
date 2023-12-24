@@ -290,7 +290,6 @@
     margin: 0 22px 0 0;
 }
 
-/* TODO: Fix this hover. Doesn't work*/
 .Icon:hover {
     color: var(--primary-white);
 }
@@ -392,6 +391,10 @@
 .StackContainerTechnologiesItem {
     width: 100%;
     margin-bottom: 2rem;
+}
+
+.StackContainerTechnologiesItem:hover {
+    background-color: black;
 }
 
 .StackContainerTechnologiesItemIcon {
