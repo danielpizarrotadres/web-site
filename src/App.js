@@ -15,6 +15,8 @@ import { TfiTwitterAlt } from 'react-icons/tfi';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 import { FaHeart } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
 
 
 const App = () => {
@@ -137,7 +139,7 @@ const App = () => {
         return <React.Fragment>
             <div className={classes.Resume}>
                 <p className={classes.TopItem}>
-                    I am passionate about web and Mobile development <span className={classes.ScreenPlay}>—</span>
+                    I am passionate about web development <span className={classes.ScreenPlay}>—</span>
                     <span className={classes.Highlight}> I love automating things </span>
                     <span className={classes.Point}>, and</span>
                     <br />
@@ -195,6 +197,16 @@ const App = () => {
             </div>
         </React.Fragment>
     };
+
+    const footer = () => {
+        return <React.Fragment>
+            <footer>
+                <span className={classes.LettersMadeWith}>
+                    Made with <FaHeart className={classes.IconMadeWith} /> by Dani
+                </span>
+            </footer>
+        </React.Fragment>
+    }
 
     const handle = () => {
         // More info about event.target.closest at: 
@@ -280,7 +292,7 @@ const App = () => {
                             Hi, I am Dani
                             <br />
                             <span className={classes.SubTitle}>
-                                Mobile and web developer,
+                                web developer,
                                 <br />
                                 from Chile.
                             </span>
@@ -288,11 +300,44 @@ const App = () => {
                     </header>
                     {resume()}
                     {icons()}
-                    <footer>
-                        <span className={classes.LettersMadeWith}>
-                            Made with <FaHeart className={classes.IconMadeWith} /> by Dani
-                        </span>
-                    </footer>
+                    <div className={classes.StackContainer}>
+                        <h1 className={classes.StackContainerTitle}>Stack</h1>
+                        <h5 className={classes.StackContainerSubTitle}>
+                            Here are the tools I'm most productive with
+                        </h5>
+
+                        <section className={classes.StackContainerTechnologies}>
+                            <div className={classes.StackContainerTechnologiesItem}>
+                                <div className={classes.StackContainerTechnologiesItemIcon}>
+                                    <SiExpress className={classes.StackContainerIcon} />
+                                </div>
+                                <div className={classes.StackContainerTechnologiesItemDescription}>
+                                    <h4 className={classes.StackContainerTechnologiesItemDescriptionTitle}>
+                                        EXPRESS
+                                    </h4>
+                                    <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
+                                        Express is a minimal and flexible Node.js web application framework
+                                        that provides a robust set of features for web and mobile applications.
+                                    </span>
+                                </div>
+                            </div>
+                            <div className={classes.StackContainerTechnologiesItem}>
+                                <div className={classes.StackContainerTechnologiesItemIcon}>
+                                    <FaReact className={classes.StackContainerIcon} />
+                                </div>
+                                <div className={classes.StackContainerTechnologiesItemDescription}>
+                                    <h4 className={classes.StackContainerTechnologiesItemDescriptionTitle}>
+                                        REACT
+                                    </h4>
+                                    <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
+                                        React is the library for web and native user interfaces.
+                                        Build user interfaces out of individual pieces called components written in JavaScript.
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    {footer()}
                 </main>
 
                 {   /*********************** Main End *****************/}
