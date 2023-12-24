@@ -302,9 +302,12 @@ const App = () => {
                     {icons()}
                     <div className={classes.StackContainer}>
                         <h1 className={classes.StackContainerTitle}>Stack</h1>
-                        <h5 className={classes.StackContainerSubTitle}>
-                            Here are the tools I'm most productive with
-                        </h5>
+
+                        <div className={classes.SubTitleContainer}>
+                            <h5 className={classes.StackContainerSubTitle}>
+                                Here are the tools I'm most productive with
+                            </h5>
+                        </div>
 
                         <section className={classes.StackContainerTechnologies}>
                             <div className={classes.StackContainerTechnologiesItem}>
