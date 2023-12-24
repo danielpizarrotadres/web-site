@@ -391,7 +391,6 @@
 .StackContainerTechnologiesItem {
     width: 100%;
     margin-bottom: 2rem;
-    padding: 1rem;
     transition: background-color 1s;
     cursor: pointer;
     border-radius: 18px;
@@ -436,6 +435,11 @@
 }
 
 @media screen and (min-width: 768px) {
+    .StackContainerTechnologies {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
     .StackContainerTitle {
         text-align: right;
     }
