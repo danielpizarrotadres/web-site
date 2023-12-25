@@ -24,11 +24,15 @@ const App = () => {
     // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
-    const [size] = useState('xl');
+    const [size] = useState('sm');
     const [toggle, setToggle] = useState({
         iconClass: classes.ArrowIcon,
         show: false,
     });
+    const [urls] = useState([
+        'https://expressjs.com/',
+        'https://react.dev/'
+    ])
 
     useEffect(() => {
         // console.log('listening to toggle -> ', toggle);
@@ -220,28 +224,48 @@ const App = () => {
                 </div>
 
                 <section className={classes.StackContainerTechnologies}>
-                    <div className={classes.StackContainerTechnologiesItem}>
+                    <div
+                        className={classes.StackContainerTechnologiesItem}
+                        onClick={() => handleOnClickStack(urls[0])}
+                    >
                         <div className={classes.StackContainerTechnologiesItemIcon}>
                             <SiExpress className={classes.StackContainerIcon} />
                         </div>
                         <div className={classes.StackContainerTechnologiesItemDescription}>
-                            <h4 className={classes.StackContainerTechnologiesItemDescriptionTitle}>
-                                EXPRESS
+                            <h4
+                                className={classes.StackContainerTechnologiesItemDescriptionTitle}
+                            >
+                                <span
+                                    className={classes.StackContainerTechnologiesItemDescriptionTitleDotted}
+                                >
+                                    EXPRESS
+                                </span>
                             </h4>
-                            <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
+                            <span
+                                className={classes.StackContainerTechnologiesItemDescriptionDetails}
+                            >
                                 Express is a minimal and flexible Node.js web application framework
                                 that provides a robust set of features for web and mobile applications.
                             </span>
                         </div>
                     </div>
 
-                    <div className={classes.StackContainerTechnologiesItem}>
+                    <div
+                        className={classes.StackContainerTechnologiesItem}
+                        onClick={() => handleOnClickStack(urls[1])}
+                    >
                         <div className={classes.StackContainerTechnologiesItemIcon}>
                             <FaReact className={classes.StackContainerIcon} />
                         </div>
                         <div className={classes.StackContainerTechnologiesItemDescription}>
-                            <h4 className={classes.StackContainerTechnologiesItemDescriptionTitle}>
-                                REACT
+                            <h4
+                                className={classes.StackContainerTechnologiesItemDescriptionTitle}
+                            >
+                                <span
+                                    className={classes.StackContainerTechnologiesItemDescriptionTitleDotted}
+                                >
+                                    REACT
+                                </span>
                             </h4>
                             <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
                                 React is the library for web and native user interfaces.
@@ -291,6 +315,10 @@ const App = () => {
                 : classes.ClickedArrowIcon,
         });
     };
+
+    const handleOnClickStack = (url) => {
+        window.open(url, '_blank');
+    }
 
     return (
         <main>

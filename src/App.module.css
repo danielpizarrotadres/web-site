@@ -389,20 +389,23 @@
 }
 
 .StackContainerTechnologiesItem {
-
     width: 100%;
     margin-bottom: 2rem;
-    transition: background-color 0.2s;
+    transition: background-color 1s;
     cursor: pointer;
     border-radius: 18px;
 
     padding: 2rem;
     box-sizing: border-box;
-    transition-timing-function: ease-in-out
+    transition-timing-function: ease-in-out;
 }
 
 .StackContainerTechnologiesItem:hover {
     background-color: #27272a66;
+}
+
+.StackContainerTechnologiesItem:active .StackContainerTechnologiesItemDescriptionTitleDotted {
+    border: 3px dotted #fbcfe8e6;
 }
 
 .StackContainerTechnologiesItemIcon {
@@ -443,6 +446,7 @@
     .StackContainerTechnologies {
         display: grid;
         grid-template-columns: auto auto;
+        column-gap: 24px;
     }
 
     .StackContainerTitle {
