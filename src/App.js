@@ -249,7 +249,6 @@ const App = () => {
                             </span>
                         </div>
                     </div>
-
                     <div
                         className={classes.StackContainerTechnologiesItem}
                         onClick={() => handleOnClickStack(urls[1])}
@@ -273,7 +272,6 @@ const App = () => {
                             </span>
                         </div>
                     </div>
-
                 </section>
             </div>
         </React.Fragment>

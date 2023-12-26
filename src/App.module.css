@@ -445,7 +445,7 @@
 @media screen and (min-width: 768px) {
     .StackContainerTechnologies {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         column-gap: 24px;
     }
 
@@ -468,6 +468,23 @@
         font-weight: 500;
         position: relative;
         right: 5px;
+    }
+
+    .StackContainerTechnologiesItem {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .StackContainerTechnologies {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 24px;
+    }
+
+    .StackContainerTechnologiesItem {
+        display: block;
     }
 }
 
