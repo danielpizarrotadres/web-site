@@ -238,7 +238,7 @@ const App = () => {
                                 <span
                                     className={classes.StackContainerTechnologiesItemDescriptionTitleDotted}
                                 >
-                                    EXPRESS
+                                    Express
                                 </span>
                             </h4>
                             <span
@@ -263,7 +263,7 @@ const App = () => {
                                 <span
                                     className={classes.StackContainerTechnologiesItemDescriptionTitleDotted}
                                 >
-                                    REACT
+                                    React
                                 </span>
                             </h4>
                             <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
