@@ -434,7 +434,7 @@
 }
 
 .StackContainerTechnologiesItemDescription {
-    text-align: left;
+    text-align: center;
 }
 
 .StackContainerTechnologiesItemDescriptionTitle {
@@ -491,6 +491,10 @@
 
     .StackContainerTechnologiesItemIcon {
         margin-right: 2rem;
+    }
+
+    .StackContainerTechnologiesItemDescription {
+        text-align: left;
     }
 }
 
