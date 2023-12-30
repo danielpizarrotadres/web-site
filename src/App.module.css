@@ -21,7 +21,7 @@
     /* This allow avoid overflow. */
 }
 
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 1400px) {
     .App {
         padding: 0 32px;
         /* filter: blur(4px); */
