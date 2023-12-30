@@ -9,17 +9,6 @@
     --navigation-height: 44px;
 }
 
-/*
-    TODO:
-
-    1. Fix the effect of the item in the Stack Section:
-
-    -> Make a div inside of `StackContainerTechnologiesItem` class
-    -> This class should be hidden whenever the user don't pass the mouse over the container (when isn't apply the :hover effect)
-    -> When the user apply :hover effect add a display block of the `StackContainerTechnologiesItem` class (to appear)
-    -> Apply the effect
-*/
-
 .App {
     height: 100vh;
     background-image: none;
@@ -412,9 +401,7 @@
 
 .StackContainerTechnologiesItem:hover {
     background-color: #27272a66;
-    scale: (1.1);
-    transform: scale(1.1);
-    transition: all 0.1s;
+    transition: all 1s;
 }
 
 .StackContainerTechnologiesItem:active .StackContainerTechnologiesItemDescriptionTitleDotted {
