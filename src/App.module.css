@@ -416,8 +416,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5rem;
-    height: 5rem;
+    min-width: 4rem;
+    max-width: 4rem;
+    height: 4rem;
     margin: 0 auto;
 }
 
@@ -483,10 +484,6 @@
         display: grid;
         grid-template-columns: auto auto;
         column-gap: 24px;
-    }
-
-    .StackContainerTechnologiesItem {
-        display: block;
     }
 }
 
