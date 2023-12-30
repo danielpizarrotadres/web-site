@@ -287,6 +287,18 @@ const App = () => {
                         Some of the other tools I am familiar with.
                     </h5>
                 </div>
+
+                <div className={classes.ToolsContaineTechnologies}>
+                    <div className={classes.ToolsContaineTechnologiesItem}>
+                        BACK-END
+                    </div>
+                    <div className={classes.ToolsContaineTechnologiesItem}>
+                        FRONT-END
+                    </div>
+                    <div className={classes.ToolsContaineTechnologiesItem}>
+                        OTHER
+                    </div>
+                </div>
             </div>
         </React.Fragment>
     }
