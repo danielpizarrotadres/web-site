@@ -532,6 +532,19 @@
 .ToolsContainerIcon {
     font-size: 1.4rem;
     color: rgb(161, 161, 170);
+    margin-right: .8rem;
+}
+
+.ToolsContainerItemTitle {
+    color: #fbcfe8e6;
+    letter-spacing: .05em;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.ToolsContaineTechnologiesItem {
+    display: flex;
+    align-items: center;
 }
 
 /************************************************ End Tools Section *************************************************/

@@ -292,7 +292,7 @@ const App = () => {
                 <div className={classes.ToolsContaineTechnologies}>
                     <div className={classes.ToolsContaineTechnologiesItem}>
                         <HiTerminal className={classes.ToolsContainerIcon} />
-                        BACK-END
+                        <span className={classes.ToolsContainerItemTitle}>BACK-END</span>
                     </div>
                     <div className={classes.ToolsContaineTechnologiesItem}>
                         FRONT-END
