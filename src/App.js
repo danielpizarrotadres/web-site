@@ -17,6 +17,7 @@ import { MdEmail } from 'react-icons/md';
 import { FaHeart } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
+import { HiTerminal } from "react-icons/hi";
 
 
 const App = () => {
@@ -290,6 +291,7 @@ const App = () => {
 
                 <div className={classes.ToolsContaineTechnologies}>
                     <div className={classes.ToolsContaineTechnologiesItem}>
+                        <HiTerminal className={classes.ToolsContainerIcon} />
                         BACK-END
                     </div>
                     <div className={classes.ToolsContaineTechnologiesItem}>
