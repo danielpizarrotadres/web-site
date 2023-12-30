@@ -219,7 +219,7 @@ const App = () => {
 
                 <div className={classes.SubTitleContainer}>
                     <h5 className={classes.StackContainerSubTitle}>
-                        Here are the tools I'm most productive with
+                        Here are the tools I'm most productive with.
                     </h5>
                 </div>
 
@@ -273,6 +273,20 @@ const App = () => {
                         </div>
                     </div>
                 </section>
+            </div>
+        </React.Fragment>
+    }
+
+    const tools = () => {
+        return <React.Fragment>
+            <div className={classes.ToolsContainer}>
+                <h1 className={classes.ToolsContainerTitle}>Tools</h1>
+
+                <div className={classes.SubTitleToolsContainer}>
+                    <h5 className={classes.ToolsContainerSubTitle}>
+                        Some of the other tools I am familiar with.
+                    </h5>
+                </div>
             </div>
         </React.Fragment>
     }
@@ -374,6 +388,7 @@ const App = () => {
                     {resume()}
                     {icons()}
                     {stack()}
+                    {tools()}
                     {footer()}
                 </main>
 

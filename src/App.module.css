@@ -495,6 +495,38 @@
 
 /************************************************ End Stack Section *************************************************/
 
+/************************************************ Tools Section *************************************************/
+
+.ToolsContainer {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.ToolsContainerTitle {
+    font-weight: bolder;
+    margin: 0;
+    text-align: left;
+}
+
+.SubTitleToolsContainer {
+    text-align: left;
+}
+
+.ToolsContainerSubTitle {
+    background-color: rgb(251, 207, 232, 0.1);
+    color: rgb(251, 207, 232, 0.9);
+    font-size: 20px;
+    padding: 0.125rem 0.75rem;
+    border-radius: 9999px;
+    display: inline;
+    font-weight: 500;
+    position: relative;
+    right: 5px;
+}
+
+/************************************************ End Tools Section *************************************************/
+
 /************************************************ Footer Section *************************************************/
 
 footer {
