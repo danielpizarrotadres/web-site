@@ -339,6 +339,11 @@ const App = () => {
                         </div>
                         <div className={classes.ToolsContaineTechnologiesItemList}>
                             <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                React Native
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
                                 TypeScript
                             </span>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
@@ -366,6 +371,11 @@ const App = () => {
                         <div className={classes.ToolsContaineTechnologiesItemList}>
                             <span className={classes.ToolsContainerTechnologiesItemDescription}>
                                 Linux
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                AWS
                             </span>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
