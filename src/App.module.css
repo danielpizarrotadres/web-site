@@ -547,9 +547,15 @@
     margin-bottom: .8rem;
 }
 
+.ToolsContaineTechnologiesItemContainer {
+    margin-bottom: 3rem;
+}
+
 .ToolsContaineTechnologiesItemList {
-    display: flex;
-    align-items: center;
+    /*
+        display: flex;
+        align-items: center;
+    */
 }
 
 .ToolsContainerTechnologiesItemPoint {
@@ -559,6 +565,9 @@
     background-color: rgb(161, 161, 170);
     opacity: .3;
     margin: 0 .8rem;
+    display: inline-block;
+    position: relative;
+    top: -3px;
 }
 
 .ToolsContainerTechnologiesItemDescription {
@@ -566,6 +575,7 @@
     font-size: 1.10rem;
     color: rgb(161, 161, 170);
     font-weight: 900;
+    display: inline-block;
 }
 
 @media screen and (min-width: 768px) {
