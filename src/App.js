@@ -18,7 +18,8 @@ import { FaHeart } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { HiTerminal } from "react-icons/hi";
-
+import { BiMinusFront } from "react-icons/bi";
+import { FaBriefcase } from "react-icons/fa";
 
 const App = () => {
     // TODO:
@@ -295,10 +296,12 @@ const App = () => {
                         <span className={classes.ToolsContainerItemTitle}>BACK-END</span>
                     </div>
                     <div className={classes.ToolsContaineTechnologiesItem}>
-                        FRONT-END
+                        <BiMinusFront className={classes.ToolsContainerIcon} />
+                        <span className={classes.ToolsContainerItemTitle}>FRONT-END</span>
                     </div>
                     <div className={classes.ToolsContaineTechnologiesItem}>
-                        OTHER
+                        <FaBriefcase className={classes.ToolsContainerIcon} />
+                        <span className={classes.ToolsContainerItemTitle}>OTHER</span>
                     </div>
                 </div>
             </div>
