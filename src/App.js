@@ -366,29 +366,49 @@ const App = () => {
                             <span className={classes.ToolsContainerItemTitle}>FRONT-END</span>
                         </div>
                         <div className={classes.ToolsContaineTechnologiesItemList}>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://reactnative.dev/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 React Native
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://www.typescriptlang.org/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 TypeScript
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://vuejs.org/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Vue
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://developer.mozilla.org/en-US/docs/Web/CSS'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 CSS
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://single-spa.js.org/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Single Spa
-                            </span>
+                            </a>
                         </div>
                     </div>
                     <div className={classes.ToolsContaineTechnologiesItemContainer}>
@@ -397,34 +417,58 @@ const App = () => {
                             <span className={classes.ToolsContainerItemTitle}>OTHER</span>
                         </div>
                         <div className={classes.ToolsContaineTechnologiesItemList}>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://www.linux.org/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Linux
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://aws.amazon.com/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 AWS
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://jestjs.io/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Jest
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://www.cypress.io/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Cypress
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://graphql.org/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 GraphQL
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://www.figma.com'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Figma
-                            </span>
+                            </a>
                         </div>
                     </div>
                 </div>
