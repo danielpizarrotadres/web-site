@@ -298,7 +298,7 @@ const App = () => {
                         </div>
                         <div className={classes.ToolsContaineTechnologiesItemList}>
                             <span className={classes.ToolsContainerTechnologiesItemDescription}>
-                                Django
+                                Nest
                             </span>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
@@ -308,7 +308,7 @@ const App = () => {
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
                             <span className={classes.ToolsContainerTechnologiesItemDescription}>
-                                Nest
+                                Django
                             </span>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
