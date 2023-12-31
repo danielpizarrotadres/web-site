@@ -506,15 +506,14 @@
 .ToolsContainerTitle {
     font-weight: bolder;
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
 
 .SubTitleToolsContainer {
-    text-align: left;
+    text-align: center;
 }
 
 .ToolsContainerSubTitle {
-    background-color: rgb(251, 207, 232, 0.1);
     color: rgb(251, 207, 232, 0.9);
     font-size: 20px;
     padding: 0.125rem 0.75rem;
@@ -567,6 +566,20 @@
     font-size: 1.10rem;
     color: rgb(161, 161, 170);
     font-weight: 900;
+}
+
+@media screen and (min-width: 768px) {
+    .ToolsContainerTitle {
+        text-align: left;
+    }
+
+    .SubTitleToolsContainer {
+        text-align: left;
+    }
+
+    .ToolsContainerSubTitle {
+        background-color: rgb(251, 207, 232, 0.1);
+    }
 }
 
 /************************************************ End Tools Section *************************************************/
