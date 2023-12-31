@@ -332,13 +332,62 @@ const App = () => {
                             </span>
                         </div>
                     </div>
-                    <div className={classes.ToolsContaineTechnologiesItem}>
-                        <BiMinusFront className={classes.ToolsContainerIcon} />
-                        <span className={classes.ToolsContainerItemTitle}>FRONT-END</span>
+                    <div className={classes.ToolsContaineTechnologiesItemContainer}>
+                        <div className={classes.ToolsContaineTechnologiesItem}>
+                            <BiMinusFront className={classes.ToolsContainerIcon} />
+                            <span className={classes.ToolsContainerItemTitle}>FRONT-END</span>
+                        </div>
+                        <div className={classes.ToolsContaineTechnologiesItemList}>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                TypeScript
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Vue
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                CSS
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Single Spa
+                            </span>
+                        </div>
                     </div>
-                    <div className={classes.ToolsContaineTechnologiesItem}>
-                        <FaBriefcase className={classes.ToolsContainerIcon} />
-                        <span className={classes.ToolsContainerItemTitle}>OTHER</span>
+                    <div className={classes.ToolsContaineTechnologiesItemContainer}>
+                        <div className={classes.ToolsContaineTechnologiesItem}>
+                            <FaBriefcase className={classes.ToolsContainerIcon} />
+                            <span className={classes.ToolsContainerItemTitle}>OTHER</span>
+                        </div>
+                        <div className={classes.ToolsContaineTechnologiesItemList}>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Linux
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Jest
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Cypress
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                GraphQL
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Figma
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
