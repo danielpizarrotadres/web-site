@@ -297,39 +297,67 @@ const App = () => {
                             <span className={classes.ToolsContainerItemTitle}>BACK-END</span>
                         </div>
                         <div className={classes.ToolsContaineTechnologiesItemList}>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://nestjs.com/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Nest
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://nodejs.org/en'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Node
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://www.djangoproject.com/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 Django
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
-                                Java
-                            </span>
+                            <a
+                                href='https://www.java.com/en/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
+                                Node
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://www.postgresql.org/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 PostgreSQL
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://www.mysql.com/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 MySQL
-                            </span>
+                            </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
-                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                            <a
+                                href='https://www.microsoft.com/en-us/sql-server'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
                                 SQL Server
-                            </span>
+                            </a>
                         </div>
                     </div>
                     <div className={classes.ToolsContaineTechnologiesItemContainer}>
