@@ -545,6 +545,28 @@
 .ToolsContaineTechnologiesItem {
     display: flex;
     align-items: center;
+    margin-bottom: .8rem;
+}
+
+.ToolsContaineTechnologiesItemList {
+    display: flex;
+    align-items: center;
+}
+
+.ToolsContainerTechnologiesItemPoint {
+    border-radius: 9999px;
+    height: 5px;
+    width: 5px;
+    background-color: rgb(161, 161, 170);
+    opacity: .3;
+    margin: 0 .8rem;
+}
+
+.ToolsContainerTechnologiesItemDescription {
+    line-height: 1.5;
+    font-size: 1.10rem;
+    color: rgb(161, 161, 170);
+    font-weight: 900;
 }
 
 /************************************************ End Tools Section *************************************************/

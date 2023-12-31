@@ -26,7 +26,7 @@ const App = () => {
     // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
-    const [size] = useState('sm');
+    const [size] = useState('lg');
     const [toggle, setToggle] = useState({
         iconClass: classes.ArrowIcon,
         show: false,
@@ -291,9 +291,46 @@ const App = () => {
                 </div>
 
                 <div className={classes.ToolsContaineTechnologies}>
-                    <div className={classes.ToolsContaineTechnologiesItem}>
-                        <HiTerminal className={classes.ToolsContainerIcon} />
-                        <span className={classes.ToolsContainerItemTitle}>BACK-END</span>
+                    <div className={classes.ToolsContaineTechnologiesItemContainer}>
+                        <div className={classes.ToolsContaineTechnologiesItem}>
+                            <HiTerminal className={classes.ToolsContainerIcon} />
+                            <span className={classes.ToolsContainerItemTitle}>BACK-END</span>
+                        </div>
+                        <div className={classes.ToolsContaineTechnologiesItemList}>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Django
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Node
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Nest
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                Java
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                PostgreSQL
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                MySQL
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <span className={classes.ToolsContainerTechnologiesItemDescription}>
+                                SQL Server
+                            </span>
+                        </div>
                     </div>
                     <div className={classes.ToolsContaineTechnologiesItem}>
                         <BiMinusFront className={classes.ToolsContainerIcon} />
