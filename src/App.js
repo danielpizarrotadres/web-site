@@ -329,7 +329,7 @@ const App = () => {
                                 target='_blank'
                                 className={classes.ToolsContainerTechnologiesItemDescription}
                             >
-                                Node
+                                Java
                             </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
