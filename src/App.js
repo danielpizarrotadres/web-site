@@ -20,13 +20,14 @@ import { FaReact } from "react-icons/fa";
 import { HiTerminal } from "react-icons/hi";
 import { BiMinusFront } from "react-icons/bi";
 import { FaBriefcase } from "react-icons/fa";
+import useWindowSize from './utils/hooks/useWindowSize';
 
 const App = () => {
     // TODO:
     // -> Make funcionality to update size state dinamycally by the current px of the naigation viewport.
     // -> Convert containers into isolated components.
     // -> Make funcionality to render mobile navigation with animations.
-    const [size] = useState('lg');
+    const [size, setSize] = useState('lg');
     const [toggle, setToggle] = useState({
         iconClass: classes.ArrowIcon,
         show: false,
@@ -34,11 +35,17 @@ const App = () => {
     const [urls] = useState([
         'https://expressjs.com/',
         'https://react.dev/'
-    ])
+    ]);
+    const windowSize = useWindowSize();
 
     useEffect(() => {
-        // console.log('listening to toggle -> ', toggle);
-    }, [toggle]);
+        const { width } = windowSize;
+        if (width <= 768) {
+            setSize('sm');
+        } else {
+            setSize('lg');
+        }
+    }, [windowSize]);
 
     const mobileNavitation = () => {
         return <React.Fragment>
