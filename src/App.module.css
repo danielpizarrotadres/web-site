@@ -604,6 +604,14 @@
     }
 }
 
+@media screen and (min-width: 1034px) {
+    .ToolsContaineTechnologies {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 58px;
+    }
+}
+
 /************************************************ End Tools Section *************************************************/
 
 /************************************************ Footer Section *************************************************/
