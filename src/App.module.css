@@ -137,6 +137,10 @@
     color: var(--primary-pink);
 }
 
+.LinkSelected {
+    color: var(--primary-pink);
+}
+
 .Toggle {
     background-color: rgb(24 24 27/1);
     color: #E4E4E7;

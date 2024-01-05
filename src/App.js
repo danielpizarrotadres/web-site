@@ -143,7 +143,9 @@ const App = () => {
                                     className={classes.Item}
                                     onClick={() => handleViewChange(item)}
                                 >
-                                    <a className={classes.Link}>
+                                    <a className={
+                                        `${classes.Link} ${item.selected ? classes.LinkSelected : ''}`
+                                    }>
                                         {item.name}
                                     </a>
                                 </li>
