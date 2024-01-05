@@ -1,3 +1,6 @@
+// TODO: Give a FadeIn class for every component
+
+
 import React, { useEffect, useState } from 'react';
 import classes from './App.module.css';
 // import { AiFillHome } from 'react-icons/ai';
@@ -38,6 +41,9 @@ const App = () => {
     ]);
     const windowSize = useWindowSize();
 
+    // Test
+    const [aux, setAux] = useState(true);
+
     useEffect(() => {
         const { width } = windowSize;
         if (width <= 768) {
@@ -69,7 +75,7 @@ const App = () => {
                     </div>
                     <section className={classes.MobileNavigationItems}>
                         <ul>
-                            <li className={classes.MobileNavigationActiveItem}>
+                            <li className={classes.MobileNavigationActiveItem} onClick={handleAux}>
                                 <a>About</a>
                             </li>
                             <li>
@@ -117,12 +123,12 @@ const App = () => {
                                 className={
                                     classes.Item
                                 }
+                                onClick={handleAux}
                             >
                                 <a
                                     className={
                                         classes.Link
                                     }
-                                    href='https://some-url-ref.com'
                                 >
                                     About
                                 </a>
@@ -524,6 +530,39 @@ const App = () => {
         window.open(url, '_blank');
     }
 
+    const handleAux = () => {
+        setAux(!aux);
+    };
+
+    const home = () => {
+        return <React.Fragment>
+            <main>
+                <header className={classes.Main}>
+                    <p className={classes.Title}>
+                        Hi, I am Dani
+                        <br />
+                        <span className={classes.SubTitle}>
+                            web developer,
+                            <br />
+                            from Chile.
+                        </span>
+                    </p>
+                </header>
+                {resume()}
+                {icons()}
+                {stack()}
+                {tools()}
+                {footer()}
+            </main>
+        </React.Fragment>;
+    }
+
+    const about = () => {
+        return <React.Fragment>
+            <h2>Another Component</h2>
+        </React.Fragment>
+    }
+
     return (
         <main>
             {toggle.show && mobileNav()}
@@ -565,24 +604,10 @@ const App = () => {
 
                 {   /*********************** Main *********************/}
                 {   /* The following main container should be isolated as a component. **/}
-                <main>
-                    <header className={classes.Main}>
-                        <p className={classes.Title}>
-                            Hi, I am Dani
-                            <br />
-                            <span className={classes.SubTitle}>
-                                web developer,
-                                <br />
-                                from Chile.
-                            </span>
-                        </p>
-                    </header>
-                    {resume()}
-                    {icons()}
-                    {stack()}
-                    {tools()}
-                    {footer()}
-                </main>
+
+                <div className={aux ? classes.FadeIn : classes.FadeOut}>
+                    {aux ? home() : about()}
+                </div>
 
                 {   /*********************** Main End *****************/}
 
