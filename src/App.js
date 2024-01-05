@@ -1,6 +1,3 @@
-// TODO: Give a FadeIn class for every component
-
-
 import React, { useEffect, useState } from 'react';
 import classes from './App.module.css';
 // import { AiFillHome } from 'react-icons/ai';
