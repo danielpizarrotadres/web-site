@@ -44,6 +44,21 @@ const App = () => {
     // Test
     const [aux, setAux] = useState(true);
 
+    const [items, setItems] = [
+        {
+            name: 'About',
+            index: 0
+        },
+        {
+            name: 'Articles',
+            index: 1
+        },
+        {
+            name: 'Projects',
+            index: 2
+        }
+    ];
+
     useEffect(() => {
         const { width } = windowSize;
         if (width <= 768) {
