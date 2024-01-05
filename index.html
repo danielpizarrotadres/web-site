@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Transition</title>
+    <style>
+        /* Transition styles for entering and leaving */
+        .page-enter-active,
+        .page-leave-active {
+            opacity: 1;
+            transition: opacity 0.5s, transform 0.5s;
+            transform: translate3d(0px, 0px, 0px);
+        }
+
+        /* Initial state when entering */
+        .page-enter-from {
+            opacity: 0;
+            transform: translate3d(5px, 0px, 0px);
+        }
+
+        /* Final state when leaving */
+        .page-leave-to {
+            opacity: 0;
+            transform: translate3d(5px, 0px, 0px);
+        }
+
+        /* Additional styling for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .page {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page page-enter-active">
+        <h1>Page Content</h1>
+        <p>This is the initial content.</p>
+        <button onclick="toggleTransition()">Toggle Transition</button>
+    </div>
+
+    <script>
+        function toggleTransition() {
+            const page = document.querySelector('.page');
+            if (page.classList.contains('page-enter-active')) {
+                console.log('In page.classLIst.contains(page-enter-active)');
+                page.classList.remove('page-enter-active', 'page-enter-from');
+                page.classList.add('page-leave-active', 'page-leave-to');
+            } else {
+                console.log('In else');
+                page.classList.remove('page-leave-active', 'page-leave-to');
+                page.classList.add('page-enter-active', 'page-enter-from');
+            }
+        }
+    </script>
+</body>
+
+</html>

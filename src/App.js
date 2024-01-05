@@ -1,3 +1,6 @@
+// TODO: Give a FadeIn class for every component
+
+
 import React, { useEffect, useState } from 'react';
 import classes from './App.module.css';
 // import { AiFillHome } from 'react-icons/ai';
@@ -38,6 +41,27 @@ const App = () => {
     ]);
     const windowSize = useWindowSize();
 
+    // Test
+    const [aux, setAux] = useState(true);
+
+    const [items, setItems] = useState([
+        {
+            index: 0,
+            name: 'About',
+            selected: true
+        },
+        {
+            index: 1,
+            name: 'Articles',
+            selected: false
+        },
+        {
+            index: 2,
+            name: 'Projects',
+            selected: false
+        }
+    ]);
+
     useEffect(() => {
         const { width } = windowSize;
         if (width <= 768) {
@@ -69,7 +93,7 @@ const App = () => {
                     </div>
                     <section className={classes.MobileNavigationItems}>
                         <ul>
-                            <li className={classes.MobileNavigationActiveItem}>
+                            <li className={classes.MobileNavigationActiveItem} onClick={handleAux}>
                                 <a>About</a>
                             </li>
                             <li>
@@ -113,34 +137,17 @@ const App = () => {
                                 classes.ItemList
                             }
                         >
-                            <li
-                                className={
-                                    classes.Item
-                                }
-                            >
-                                <a
-                                    className={
-                                        classes.Link
-                                    }
-                                    href='https://some-url-ref.com'
+                            {items.map((item) =>
+                                <li
+                                    key={item.index}
+                                    className={classes.Item}
+                                    onClick={() => handleViewChange(item)}
                                 >
-                                    About
-                                </a>
-                            </li>
-                            <li
-                                className={
-                                    classes.Item
-                                }
-                            >
-                                <a
-                                    className={
-                                        classes.Link
-                                    }
-                                    href='https://some-url-ref.com'
-                                >
-                                    Articles
-                                </a>
-                            </li>
+                                    <a className={classes.Link}>
+                                        {item.name}
+                                    </a>
+                                </li>
+                            )}
                         </ul>
                     </nav>
                 </React.Fragment>;
@@ -524,6 +531,63 @@ const App = () => {
         window.open(url, '_blank');
     }
 
+    const handleAux = () => {
+        setAux(!aux);
+    };
+
+    // TODO: Refactor setItems. Add a better implementation:
+    const handleViewChange = (item) => {
+        setItems(items.map(aux => {
+            const findSelectedItem = aux.index === item.index;
+            if (findSelectedItem) {
+                return {
+                    ...aux,
+                    selected: true,
+                }
+            } else {
+                return {
+                    ...aux,
+                    selected: false,
+                }
+            }
+        }));
+    };
+
+    const home = () => {
+        return <React.Fragment>
+            <main>
+                <header className={classes.Main}>
+                    <p className={classes.Title}>
+                        Hi, I am Dani
+                        <br />
+                        <span className={classes.SubTitle}>
+                            web developer,
+                            <br />
+                            from Chile.
+                        </span>
+                    </p>
+                </header>
+                {resume()}
+                {icons()}
+                {stack()}
+                {tools()}
+                {footer()}
+            </main>
+        </React.Fragment>;
+    }
+
+    const about = () => {
+        return <React.Fragment>
+            <h2>Articles section</h2>
+        </React.Fragment>
+    }
+
+    const projects = () => {
+        return <React.Fragment>
+            <h2>Projects section</h2>
+        </React.Fragment>
+    }
+
     return (
         <main>
             {toggle.show && mobileNav()}
@@ -565,24 +629,18 @@ const App = () => {
 
                 {   /*********************** Main *********************/}
                 {   /* The following main container should be isolated as a component. **/}
-                <main>
-                    <header className={classes.Main}>
-                        <p className={classes.Title}>
-                            Hi, I am Dani
-                            <br />
-                            <span className={classes.SubTitle}>
-                                web developer,
-                                <br />
-                                from Chile.
-                            </span>
-                        </p>
-                    </header>
-                    {resume()}
-                    {icons()}
-                    {stack()}
-                    {tools()}
-                    {footer()}
-                </main>
+
+                <div className={items[0].selected ? classes.FadeIn : classes.FadeOut}>
+                    {items[0].selected && home()}
+                </div>
+
+                <div className={items[1].selected ? classes.FadeIn : classes.FadeOut}>
+                    {items[1].selected && about()}
+                </div>
+
+                <div className={items[2].selected ? classes.FadeIn : classes.FadeOut}>
+                    {items[2].selected && projects()}
+                </div>
 
                 {   /*********************** Main End *****************/}
 
