@@ -578,13 +578,13 @@ const App = () => {
 
     const about = () => {
         return <React.Fragment>
-            <h2>Another Component</h2>
+            <h2>Articles section</h2>
         </React.Fragment>
     }
 
     const projects = () => {
         return <React.Fragment>
-            <h1>Projects</h1>
+            <h2>Projects section</h2>
         </React.Fragment>
     }
 
