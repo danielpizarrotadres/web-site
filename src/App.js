@@ -582,6 +582,12 @@ const App = () => {
         </React.Fragment>
     }
 
+    const projects = () => {
+        return <React.Fragment>
+            <h1>Projects</h1>
+        </React.Fragment>
+    }
+
     return (
         <main>
             {toggle.show && mobileNav()}
@@ -624,12 +630,16 @@ const App = () => {
                 {   /*********************** Main *********************/}
                 {   /* The following main container should be isolated as a component. **/}
 
-                <div className={aux ? classes.FadeIn : classes.FadeOut}>
-                    {aux && home()}
+                <div className={items[0].selected ? classes.FadeIn : classes.FadeOut}>
+                    {items[0].selected && home()}
                 </div>
 
-                <div className={aux ? classes.FadeOut : classes.FadeIn}>
-                    {!aux && about()}
+                <div className={items[1].selected ? classes.FadeIn : classes.FadeOut}>
+                    {items[1].selected && about()}
+                </div>
+
+                <div className={items[2].selected ? classes.FadeIn : classes.FadeOut}>
+                    {items[2].selected && projects()}
                 </div>
 
                 {   /*********************** Main End *****************/}
