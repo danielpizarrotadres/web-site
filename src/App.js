@@ -606,7 +606,11 @@ const App = () => {
                 {   /* The following main container should be isolated as a component. **/}
 
                 <div className={aux ? classes.FadeIn : classes.FadeOut}>
-                    {aux ? home() : about()}
+                    {aux && home()}
+                </div>
+
+                <div className={aux ? classes.FadeOut : classes.FadeIn}>
+                    {!aux && about()}
                 </div>
 
                 {   /*********************** Main End *****************/}
