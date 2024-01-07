@@ -562,15 +562,17 @@ const App = () => {
         </React.Fragment>;
     }
 
-    const about = () => {
-        return <React.Fragment>
-            <h2>Articles section</h2>
-        </React.Fragment>
-    }
-
     const projects = () => {
         return <React.Fragment>
             <h2>Projects section</h2>
+        </React.Fragment>
+    }
+
+    const articles = () => {
+        return <React.Fragment>
+            <article>
+                <h1>Articles!</h1>
+            </article>
         </React.Fragment>
     }
 
@@ -620,7 +622,7 @@ const App = () => {
                 </div>
 
                 <div className={items[1].selected ? classes.FadeIn : classes.FadeOut}>
-                    {items[1].selected && about()}
+                    {items[1].selected && articles()}
                 </div>
 
                 <div className={items[2].selected ? classes.FadeIn : classes.FadeOut}>
