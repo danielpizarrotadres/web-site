@@ -68,17 +68,6 @@ const App = () => {
         }
     }, [windowSize]);
 
-    const mobileNavitation = () => {
-        return <React.Fragment>
-            <div className={classes.MobileNavigation}>
-                <div className={classes.MobileNavigationHeader}>
-                    Navigation
-                    Icon
-                </div>
-            </div>
-        </React.Fragment>;
-    };
-
     const mobileNav = () => {
         return <React.Fragment>
             <nav className={classes.MobileNav}>
@@ -619,7 +608,6 @@ const App = () => {
                     /* The following JSX React Fragment should be isolated as a component  */
                     /* This funcionality allow render the menu navigation on mobile devices */
                 }
-                { /* toggle.show && mobileNavitation() */}
 
                 {   /*********************** Header End *****************/}
 
