@@ -38,9 +38,6 @@ const App = () => {
     ]);
     const windowSize = useWindowSize();
 
-    // Test
-    const [aux, setAux] = useState(true);
-
     const [items, setItems] = useState([
         {
             index: 0,
@@ -522,10 +519,6 @@ const App = () => {
     const handleOnClickStack = (url) => {
         window.open(url, '_blank');
     }
-
-    const handleAux = () => {
-        setAux(!aux);
-    };
 
     // TODO: Refactor setItems. Add a better implementation:
     const handleViewChange = (item) => {
