@@ -79,13 +79,17 @@ const App = () => {
                     </div>
                     <section className={classes.MobileNavigationItems}>
                         <ul>
-                            <li className={classes.MobileNavigationActiveItem} onClick={handleAux}>
-                                <a>About</a>
-                            </li>
-                            <li>
-                                <a>Articles</a>
-                            </li>
-                            <li><a>Projects</a></li>
+                            {items.map((item) =>
+                                <li
+                                    key={item.index}
+                                    className={classes.MobileNavigationActiveItem}
+                                    onClick={() => handleViewChange(item)}
+                                >
+                                    <a>
+                                        {item.name}
+                                    </a>
+                                </li>
+                            )}
                         </ul>
                     </section>
                 </div>
@@ -539,6 +543,7 @@ const App = () => {
                 }
             }
         }));
+        handle();
     };
 
     const home = () => {
