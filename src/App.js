@@ -571,7 +571,8 @@ const App = () => {
     const articles = () => {
         return <React.Fragment>
             <article className={classes.ArticleContainer}>
-                <h1>Articles!</h1>
+                <h1>Writing on JavaScript, React and web development in general.</h1>
+                <h5>Whenever I feel like writing down something I've learnt, I do it here.</h5>
             </article>
         </React.Fragment>
     }

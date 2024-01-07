@@ -657,7 +657,19 @@ footer {
 
 .ArticleContainer {
     margin: 32px 0 0 0;
-    border: 1px solid white;
+}
+
+.ArticleContainer h1 {
+    line-height: 1.25;
+    font-size: 2.25rem;
+    letter-spacing: -.025em;
+    font-weight: 900;
+}
+
+.ArticleContainer h5 {
+    margin: 1rem 0 0 0;
+    color: rgb(161 161 170/1);
+    font-size: 1.1rem;
 }
 
 /************************************************ Articles Section *************************************************/
