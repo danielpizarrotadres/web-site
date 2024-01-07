@@ -332,7 +332,7 @@ const App = () => {
                                 target='_blank'
                                 className={classes.ToolsContainerTechnologiesItemDescription}
                             >
-                                Spring BOot
+                                Spring Boot
                             </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
