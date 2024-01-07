@@ -560,8 +560,11 @@ const App = () => {
 
     const projects = () => {
         return <React.Fragment>
-            <h2>Projects section</h2>
-        </React.Fragment>
+            <article className={classes.ProjectContainer}>
+                <h1>I've made a few things.</h1>
+                <h5>I am not very creative, and my side projects are rarely get finished, let alone published — but I am proud of the ones listed here.</h5>
+            </article>
+        </React.Fragment>;
     }
 
     const articles = () => {
@@ -570,7 +573,7 @@ const App = () => {
                 <h1>Writing on JavaScript, React and web development in general.</h1>
                 <h5>Whenever I feel like writing down something I've learnt, I do it here.</h5>
             </article>
-        </React.Fragment>
+        </React.Fragment>;
     }
 
     return (
