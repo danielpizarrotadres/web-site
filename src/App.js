@@ -328,11 +328,11 @@ const App = () => {
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
                             <a
-                                href='https://www.java.com/en/'
+                                href='https://spring.io/projects/spring-boot/'
                                 target='_blank'
                                 className={classes.ToolsContainerTechnologiesItemDescription}
                             >
-                                Java
+                                Spring BOot
                             </a>
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
@@ -570,7 +570,7 @@ const App = () => {
 
     const articles = () => {
         return <React.Fragment>
-            <article>
+            <article className={classes.ArticleContainer}>
                 <h1>Articles!</h1>
             </article>
         </React.Fragment>
