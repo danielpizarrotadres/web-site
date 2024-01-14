@@ -254,7 +254,7 @@
 
 .Main {
     max-width: 672px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin: 128px 0 0 0;
 }
 
@@ -658,7 +658,7 @@ footer {
 .ArticleContainer {
     margin: 128px 0 0 0;
     max-width: 672px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .ArticleContainer h1 {
@@ -688,7 +688,7 @@ footer {
 .ProjectContainer {
     margin: 128px 0 0 0;
     max-width: 672px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .ProjectContainer h1 {
