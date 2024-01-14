@@ -656,7 +656,9 @@ footer {
 /************************************************ Articles Section *************************************************/
 
 .ArticleContainer {
-    margin: 32px 0 0 0;
+    margin: 128px 0 0 0;
+    max-width: 672px;
+    /* border: 1px solid white; */
 }
 
 .ArticleContainer h1 {
@@ -672,12 +674,21 @@ footer {
     font-size: 1.1rem;
 }
 
+@media screen and (max-width: 912px) {
+    .ArticleContainer {
+        margin: 32px 0 0 0;
+        text-align: left;
+    }
+}
+
 /************************************************ Articles Section *************************************************/
 
 /************************************************ Projects Section *************************************************/
 
 .ProjectContainer {
-    margin: 32px 0 0 0;
+    margin: 128px 0 0 0;
+    max-width: 672px;
+    /* border: 1px solid white; */
 }
 
 .ProjectContainer h1 {
