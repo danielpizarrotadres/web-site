@@ -637,7 +637,7 @@
 footer {
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 .LettersMadeWith {
@@ -672,6 +672,57 @@ footer {
     margin: 1rem 0 0 0;
     color: rgb(161 161 170/1);
     font-size: 1.1rem;
+}
+
+.ArticlesListContainer {
+    margin-top: 4rem;
+}
+
+.ArticlesItem {
+    cursor: pointer;
+}
+
+.ArticlesItemTop {
+    border-left: 2px solid rgb(161 161 170/1);
+    margin-bottom: 12px;
+}
+
+.ArticlesItemTopDate,
+.ArticlesItemTopDurationOfRead {
+    display: block;
+    padding-left: 14px;
+    font-size: 14px;
+    color: rgb(161, 161, 170);
+}
+
+.ArticlesItemContentTitle {
+    font-size: 17px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.ArticlesItemContentDescription {
+    margin: 8px 0 0 0;
+    padding: 0;
+    color: rgb(161, 161, 170);
+    font-size: 16px;
+}
+
+.ArticlesItemBottom {
+    margin: 16px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.ArticlesItemBottom span {
+    color: rgb(249, 168, 212);
+    font-size: 16px;
+}
+
+.ArticlesArrowIcon {
+    color: rgb(249, 168, 212);
+    margin-left: 8px;
 }
 
 @media screen and (max-width: 912px) {
