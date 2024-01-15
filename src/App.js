@@ -576,7 +576,6 @@ const App = () => {
                     <h1>Writing on JavaScript, React and web development in general.</h1>
                     <h5>Whenever I feel like writing down something I've learnt, I do it here.</h5>
                 </article>
-                {/* Article 1 */}
                 <section className={classes.ArticlesListContainer}>
                     <div className={classes.ArticlesItem}>
                         <div className={classes.ArticlesItemTop}>
@@ -597,9 +596,6 @@ const App = () => {
                             <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
                         </div>
                     </div>
-                </section>
-                {/* Article 2 */}
-                <section className={classes.ArticlesListContainer}>
                     <div className={classes.ArticlesItem}>
                         <div className={classes.ArticlesItemTop}>
                             <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
@@ -619,9 +615,6 @@ const App = () => {
                             <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
                         </div>
                     </div>
-                </section>
-                {/* Article 3 */}
-                <section className={classes.ArticlesListContainer}>
                     <div className={classes.ArticlesItem}>
                         <div className={classes.ArticlesItemTop}>
                             <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>

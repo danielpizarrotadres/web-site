@@ -680,6 +680,14 @@ footer {
 
 .ArticlesItem {
     cursor: pointer;
+    margin-top: 24px;
+    padding: 1.3em;
+    border-radius: 18px;
+}
+
+.ArticlesItem:hover {
+    background-color: #27272a66;
+    transition: all 1s;
 }
 
 .ArticlesItemTop {
