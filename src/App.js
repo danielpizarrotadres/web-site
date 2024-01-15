@@ -228,6 +228,29 @@ const App = () => {
                 <section className={classes.StackContainerTechnologies}>
                     <div
                         className={classes.StackContainerTechnologiesItem}
+                        onClick={() => handleOnClickStack(urls[1])}
+                    >
+                        <div className={classes.StackContainerTechnologiesItemIcon}>
+                            <FaReact className={classes.StackContainerIcon} />
+                        </div>
+                        <div className={classes.StackContainerTechnologiesItemDescription}>
+                            <h4
+                                className={classes.StackContainerTechnologiesItemDescriptionTitle}
+                            >
+                                <span
+                                    className={classes.StackContainerTechnologiesItemDescriptionTitleDotted}
+                                >
+                                    React
+                                </span>
+                            </h4>
+                            <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
+                                React is the library for web and native user interfaces.
+                                Build user interfaces out of individual pieces called components written in JavaScript.
+                            </span>
+                        </div>
+                    </div>
+                    <div
+                        className={classes.StackContainerTechnologiesItem}
                         onClick={() => handleOnClickStack(urls[0])}
                     >
                         <div className={classes.StackContainerTechnologiesItemIcon}>
@@ -248,29 +271,6 @@ const App = () => {
                             >
                                 Express is a minimal and flexible Node.js web application framework
                                 that provides a robust set of features for web and mobile applications.
-                            </span>
-                        </div>
-                    </div>
-                    <div
-                        className={classes.StackContainerTechnologiesItem}
-                        onClick={() => handleOnClickStack(urls[1])}
-                    >
-                        <div className={classes.StackContainerTechnologiesItemIcon}>
-                            <FaReact className={classes.StackContainerIcon} />
-                        </div>
-                        <div className={classes.StackContainerTechnologiesItemDescription}>
-                            <h4
-                                className={classes.StackContainerTechnologiesItemDescriptionTitle}
-                            >
-                                <span
-                                    className={classes.StackContainerTechnologiesItemDescriptionTitleDotted}
-                                >
-                                    React
-                                </span>
-                            </h4>
-                            <span className={classes.StackContainerTechnologiesItemDescriptionDetails}>
-                                React is the library for web and native user interfaces.
-                                Build user interfaces out of individual pieces called components written in JavaScript.
                             </span>
                         </div>
                     </div>
