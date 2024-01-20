@@ -569,6 +569,130 @@ const App = () => {
         </React.Fragment>;
     }
 
+    const articlesListItemMobile = () => {
+        return <section className={classes.ArticlesListContainer}>
+            <div className={classes.ArticlesItem}>
+                <div className={classes.ArticlesItemTop}>
+                    <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
+                    <span className={classes.ArticlesItemTopDurationOfRead}>6 min read</span>
+                </div>
+                <div className={classes.ArticlesItemContent}>
+                    <h6 className={classes.ArticlesItemContentTitle}>
+                        Managing GitLab Integration using Microsoft Teams
+                    </h6>
+                    <p className={classes.ArticlesItemContentDescription}>
+                        Microsoft Teams has a pretty good integration with GitLab repositories.
+                        This article shows how to integrate in your channels in a simple way.
+                    </p>
+                </div>
+                <div className={classes.ArticlesItemBottom}>
+                    <span>Read article</span>
+                    <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
+                </div>
+            </div>
+            <div className={classes.ArticlesItem}>
+                <div className={classes.ArticlesItemTop}>
+                    <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
+                    <span className={classes.ArticlesItemTopDurationOfRead}>6 min read</span>
+                </div>
+                <div className={classes.ArticlesItemContent}>
+                    <h6 className={classes.ArticlesItemContentTitle}>
+                        Managing GitLab Integration using Microsoft Teams
+                    </h6>
+                    <p className={classes.ArticlesItemContentDescription}>
+                        Microsoft Teams has a pretty good integration with GitLab repositories.
+                        This article shows how to integrate in your channels in a simple way.
+                    </p>
+                </div>
+                <div className={classes.ArticlesItemBottom}>
+                    <span>Read article</span>
+                    <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
+                </div>
+            </div>
+            <div className={classes.ArticlesItem}>
+                <div className={classes.ArticlesItemTop}>
+                    <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
+                    <span className={classes.ArticlesItemTopDurationOfRead}>6 min read</span>
+                </div>
+                <div className={classes.ArticlesItemContent}>
+                    <h6 className={classes.ArticlesItemContentTitle}>
+                        Managing GitLab Integration using Microsoft Teams
+                    </h6>
+                    <p className={classes.ArticlesItemContentDescription}>
+                        Microsoft Teams has a pretty good integration with GitLab repositories.
+                        This article shows how to integrate in your channels in a simple way.
+                    </p>
+                </div>
+                <div className={classes.ArticlesItemBottom}>
+                    <span>Read article</span>
+                    <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
+                </div>
+            </div>
+        </section>
+    }
+
+    const articleListItemDesktop = () => {
+        return <section className={classes.ArticlesListContainer}>
+            <div className={classes.ArticlesItemDesktop}>
+                <div className={classes.ArticlesItemDesktopLeft}>
+                    <span className={classes.ArticlesItemDesktopLeftDate}>January 4, 2024</span>
+                    <span className={classes.ArticlesItemDesktopDurationOfRead}>6 min read</span>
+                </div>
+                <div className={classes.ArticlesItemDesktopRight}>
+                    <h6 className={classes.ArticlesItemDesktopRightTitle}>
+                        Managing GitLab Integration using Microsoft Teams
+                    </h6>
+                    <p className={classes.ArticlesItemDesktopRightDescription}>
+                        Microsoft Teams has a pretty good integration with GitLab repositories.
+                        This article shows how to integrate in your channels in a simple way.
+                    </p>
+                    <div className={classes.ArticlesItemDesktopBottom}>
+                        <span className={classes.ArticlesItemDesktopBottomInfo}>Read article</span>
+                        <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
+                    </div>
+                </div>
+            </div>
+            <div className={classes.ArticlesItemDesktop}>
+                <div className={classes.ArticlesItemDesktopLeft}>
+                    <span className={classes.ArticlesItemDesktopLeftDate}>January 4, 2024</span>
+                    <span className={classes.ArticlesItemDesktopDurationOfRead}>6 min read</span>
+                </div>
+                <div className={classes.ArticlesItemDesktopRight}>
+                    <h6 className={classes.ArticlesItemDesktopRightTitle}>
+                        Managing GitLab Integration using Microsoft Teams
+                    </h6>
+                    <p className={classes.ArticlesItemDesktopRightDescription}>
+                        Microsoft Teams has a pretty good integration with GitLab repositories.
+                        This article shows how to integrate in your channels in a simple way.
+                    </p>
+                    <div className={classes.ArticlesItemDesktopBottom}>
+                        <span className={classes.ArticlesItemDesktopBottomInfo}>Read article</span>
+                        <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
+                    </div>
+                </div>
+            </div>
+            <div className={classes.ArticlesItemDesktop}>
+                <div className={classes.ArticlesItemDesktopLeft}>
+                    <span className={classes.ArticlesItemDesktopLeftDate}>January 4, 2024</span>
+                    <span className={classes.ArticlesItemDesktopDurationOfRead}>6 min read</span>
+                </div>
+                <div className={classes.ArticlesItemDesktopRight}>
+                    <h6 className={classes.ArticlesItemDesktopRightTitle}>
+                        Managing GitLab Integration using Microsoft Teams
+                    </h6>
+                    <p className={classes.ArticlesItemDesktopRightDescription}>
+                        Microsoft Teams has a pretty good integration with GitLab repositories.
+                        This article shows how to integrate in your channels in a simple way.
+                    </p>
+                    <div className={classes.ArticlesItemDesktopBottom}>
+                        <span className={classes.ArticlesItemDesktopBottomInfo}>Read article</span>
+                        <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+
     const articles = () => {
         return <React.Fragment>
             <main>
@@ -576,65 +700,7 @@ const App = () => {
                     <h1>Writing on JavaScript, React and web development in general.</h1>
                     <h5>Whenever I feel like writing down something I've learnt, I do it here.</h5>
                 </article>
-                <section className={classes.ArticlesListContainer}>
-                    <div className={classes.ArticlesItem}>
-                        <div className={classes.ArticlesItemTop}>
-                            <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
-                            <span className={classes.ArticlesItemTopDurationOfRead}>6 min read</span>
-                        </div>
-                        <div className={classes.ArticlesItemContent}>
-                            <h6 className={classes.ArticlesItemContentTitle}>
-                                Managing GitLab Integration using Microsoft Teams
-                            </h6>
-                            <p className={classes.ArticlesItemContentDescription}>
-                                Microsoft Teams has a pretty good integration with GitLab repositories.
-                                This article shows how to integrate in your channels in a simple way.
-                            </p>
-                        </div>
-                        <div className={classes.ArticlesItemBottom}>
-                            <span>Read article</span>
-                            <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
-                        </div>
-                    </div>
-                    <div className={classes.ArticlesItem}>
-                        <div className={classes.ArticlesItemTop}>
-                            <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
-                            <span className={classes.ArticlesItemTopDurationOfRead}>6 min read</span>
-                        </div>
-                        <div className={classes.ArticlesItemContent}>
-                            <h6 className={classes.ArticlesItemContentTitle}>
-                                Managing GitLab Integration using Microsoft Teams
-                            </h6>
-                            <p className={classes.ArticlesItemContentDescription}>
-                                Microsoft Teams has a pretty good integration with GitLab repositories.
-                                This article shows how to integrate in your channels in a simple way.
-                            </p>
-                        </div>
-                        <div className={classes.ArticlesItemBottom}>
-                            <span>Read article</span>
-                            <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
-                        </div>
-                    </div>
-                    <div className={classes.ArticlesItem}>
-                        <div className={classes.ArticlesItemTop}>
-                            <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
-                            <span className={classes.ArticlesItemTopDurationOfRead}>6 min read</span>
-                        </div>
-                        <div className={classes.ArticlesItemContent}>
-                            <h6 className={classes.ArticlesItemContentTitle}>
-                                Managing GitLab Integration using Microsoft Teams
-                            </h6>
-                            <p className={classes.ArticlesItemContentDescription}>
-                                Microsoft Teams has a pretty good integration with GitLab repositories.
-                                This article shows how to integrate in your channels in a simple way.
-                            </p>
-                        </div>
-                        <div className={classes.ArticlesItemBottom}>
-                            <span>Read article</span>
-                            <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
-                        </div>
-                    </div>
-                </section>
+                {size == 'sm' ? articlesListItemMobile() : articleListItemDesktop()}
             </main>
         </React.Fragment>;
     }

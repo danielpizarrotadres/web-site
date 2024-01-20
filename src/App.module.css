@@ -733,6 +733,66 @@ footer {
     margin-left: 8px;
 }
 
+.ArticlesItemDesktop {
+    border-left: 1px solid rgba(63, 63, 70, 0.4);
+    display: flex;
+    opacity: 1;
+}
+
+.ArticlesItemDesktopLeft {
+    min-width: 180px;
+    padding: 1.3rem;
+    border-left: 1px solid rgba(63, 63, 70, 0.4);
+}
+
+.ArticlesItemDesktopLeftDate {
+    color: rgb(113, 113, 122);
+    font-size: 16px;
+    display: block;
+}
+
+.ArticlesItemDesktopDurationOfRead {
+    color: rgb(113, 113, 122);
+    font-size: 14px;
+    display: block;
+    margin-top: 4px;
+}
+
+.ArticlesItemDesktopRightTitle {
+    color: white;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.ArticlesItemDesktopRightDescription {
+    color: rgb(161, 161, 170);
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.ArticlesItemDesktopRight {
+    padding: 1.3rem;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.ArticlesItemDesktopRight:hover {
+    background-color: #27272a66;
+    transition: all 1s;
+}
+
+.ArticlesItemDesktopBottom {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.ArticlesItemDesktopBottomInfo {
+    color: rgb(249, 168, 212);
+    font-size: 16px;
+}
+
 @media screen and (max-width: 912px) {
     .ArticleContainer {
         margin: 32px 0 0 0;
