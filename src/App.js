@@ -445,6 +445,15 @@ const App = () => {
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
                             <a
+                                href='https://www.nginx.com/'
+                                target='_blank'
+                                className={classes.ToolsContainerTechnologiesItemDescription}
+                            >
+                                NGINX
+                            </a>
+                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
+                            </span>
+                            <a
                                 href='https://jestjs.io/'
                                 target='_blank'
                                 className={classes.ToolsContainerTechnologiesItemDescription}
