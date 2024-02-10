@@ -1,3 +1,8 @@
+// TODO:
+
+// 1- Add MobileNavigation component, keeping the toggle state in App.js
+// 2- Add Navigation component (for desktop)
+
 import React, { useEffect, useState } from 'react';
 import classes from './App.module.css';
 // import { AiFillHome } from 'react-icons/ai';
