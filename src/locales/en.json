@@ -1,0 +1,18 @@
+{
+    "navigation": {
+        "items": [
+            {
+                "id": 0,
+                "label": "About"
+            },
+            {
+                "id": 1,
+                "label": "Articles"
+            },
+            {
+                "id": 2,
+                "label": "Projects"
+            }
+        ]
+    }
+}

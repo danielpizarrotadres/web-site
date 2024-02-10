@@ -5,33 +5,22 @@
 
 import React, { useEffect, useState } from 'react';
 import classes from './MobileNavigation.module.css';
-import { IoMdClose } from "react-icons/io";
+import { IoMdClose } from 'react-icons/io';
+import locales from '../locales/en.json'
 
 export const MobileNavigation = () => {
-    const [items, setItems] = useState([
-        {
-            index: 0,
-            name: 'About',
-            selected: true
-        },
-        {
-            index: 1,
-            name: 'Articles',
-            selected: false
-        },
-        {
-            index: 2,
-            name: 'Projects',
-            selected: false
-        }
-    ]);
+    const { navigation } = locales;
 
     useEffect(() => {
         // Implement
     }, []);
 
-    const handleOnClick = (data = null) => {
-        console.log('handleOnClick' + data);
+    const closeMobileNavigation = (data = null) => {
+        console.log('closeMobileNavigation' + data);
+    }
+
+    const onPressItemNavigation = (data = null) => {
+        console.log('closeMobileNavigation' + data);
     }
 
     return (
@@ -39,18 +28,18 @@ export const MobileNavigation = () => {
             <div className={classes.NavMenu}>
                 <div className={classes.MobileNavigationHeader}>
                     <h2>Navigation</h2>
-                    <IoMdClose className={classes.Closing} onClick={handleOnClick} />
+                    <IoMdClose className={classes.Closing} onClick={closeMobileNavigation} />
                 </div>
                 <section className={classes.MobileNavigationItems}>
                     <ul>
-                        {items.map((item) =>
+                        {navigation.items.map(({ label, id }) =>
                             <li
-                                key={item.index}
+                                key={id}
                                 className={classes.MobileNavigationActiveItem}
-                                onClick={() => handleOnClick(item)}
+                                onClick={() => onPressItemNavigation(label)}
                             >
                                 <a>
-                                    {item.name}
+                                    {label}
                                 </a>
                             </li>
                         )}
