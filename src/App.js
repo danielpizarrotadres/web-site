@@ -68,34 +68,34 @@ const App = () => {
         }
     }, [windowSize]);
 
-    const mobileNav = () => {
-        return <React.Fragment>
-            <nav className={classes.MobileNav}>
-                <div className={classes.NavMenu}>
-                    <div className={classes.MobileNavigationHeader}>
-                        <h2>Navigation</h2>
-                        { /* <img alt='closing' src={closing} /> */}
-                        <IoMdClose className={classes.Closing} onClick={handleOnClick} />
-                    </div>
-                    <section className={classes.MobileNavigationItems}>
-                        <ul>
-                            {items.map((item) =>
-                                <li
-                                    key={item.index}
-                                    className={classes.MobileNavigationActiveItem}
-                                    onClick={() => handleViewChange(item)}
-                                >
-                                    <a>
-                                        {item.name}
-                                    </a>
-                                </li>
-                            )}
-                        </ul>
-                    </section>
-                </div>
-            </nav>
-        </React.Fragment>;
-    };
+    // const mobileNav = () => {
+    //     return <React.Fragment>
+    //         <nav className={classes.MobileNav}>
+    //             <div className={classes.NavMenu}>
+    //                 <div className={classes.MobileNavigationHeader}>
+    //                     <h2>Navigation</h2>
+    //                     { /* <img alt='closing' src={closing} /> */}
+    //                     <IoMdClose className={classes.Closing} onClick={handleOnClick} />
+    //                 </div>
+    //                 <section className={classes.MobileNavigationItems}>
+    //                     <ul>
+    //                         {items.map((item) =>
+    //                             <li
+    //                                 key={item.index}
+    //                                 className={classes.MobileNavigationActiveItem}
+    //                                 onClick={() => handleViewChange(item)}
+    //                             >
+    //                                 <a>
+    //                                     {item.name}
+    //                                 </a>
+    //                             </li>
+    //                         )}
+    //                     </ul>
+    //                 </section>
+    //             </div>
+    //         </nav>
+    //     </React.Fragment>;
+    // };
 
     const navigation = () => {
         switch (size) {
