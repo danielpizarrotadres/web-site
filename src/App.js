@@ -542,9 +542,9 @@ const App = () => {
     }
 
     // TODO: Refactor setItems. Add a better implementation:
-    const handleViewChange = (item) => {
+    const handleViewChange = (id) => {
         setItems(items.map(aux => {
-            const findSelectedItem = aux.index === item.index;
+            const findSelectedItem = aux.id === id;
             if (findSelectedItem) {
                 return {
                     ...aux,
@@ -731,7 +731,7 @@ const App = () => {
 
     return (
         <main>
-            {toggle.show && <MobileNavigation />}
+            {toggle.show && <MobileNavigation onPress={handleViewChange} />}
             { /* onClick={handle} */}
             <div
                 onClick={handle}

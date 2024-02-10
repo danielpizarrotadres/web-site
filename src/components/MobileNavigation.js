@@ -1,14 +1,9 @@
-// TODO:
-
-// 1- Add MobileNavigation component, keeping the toggle state in App.js
-// 2- Add Navigation component (for desktop)
-
 import React, { useEffect, useState } from 'react';
 import classes from './MobileNavigation.module.css';
 import { IoMdClose } from 'react-icons/io';
 import locales from '../locales/en.json'
 
-export const MobileNavigation = () => {
+export const MobileNavigation = ({ onPress }) => {
     const { navigation: { items, title } } = locales;
 
     useEffect(() => {
@@ -19,8 +14,8 @@ export const MobileNavigation = () => {
         console.log('closeMobileNavigation' + data);
     }
 
-    const onPressItemNavigation = (data = null) => {
-        console.log('closeMobileNavigation' + data);
+    const onPressItemNavigation = (id) => {
+        onPress(id);
     }
 
     return (
@@ -36,7 +31,7 @@ export const MobileNavigation = () => {
                             <li
                                 key={id}
                                 className={classes.MobileNavigationActiveItem}
-                                onClick={() => onPressItemNavigation(label)}
+                                onClick={() => onPressItemNavigation(id)}
                             >
                                 <a>
                                     {label}
