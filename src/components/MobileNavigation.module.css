@@ -1,0 +1,65 @@
+.MobileNav {
+    position: relative;
+    text-align: center;
+}
+
+.NavMenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: calc(100% - 100px);
+    background-color: #18181b;
+    border-radius: 0.75rem;
+    z-index: 1;
+    top: 8.5rem;
+    border: 1px solid rgb(39 39 42/1);
+    opacity: 1;
+    text-align: left;
+    padding: 12px;
+}
+
+.MobileNavigationHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MobileNavigationHeader h2 {
+    color: rgb(82 82 91/1);
+    letter-spacing: .05em;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+.MobileNavigationHeader img {
+    color: white;
+}
+
+.MobileNavigationItems {
+    margin-top: 12px;
+}
+
+.MobileNavigationItems li {
+    padding: .5rem 0;
+    color: #a1a1aa;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid rgb(39 39 42/1);
+    cursor: pointer;
+}
+
+.MobileNavigationItems li:last-child {
+    border-bottom: none;
+}
+
+.MobileNavigationItems .MobileNavigationActiveItem {
+    color: rgb(228 228 231/1);
+}
+
+.Closing {
+    color: rgb(228 228 231/1);
+    cursor: pointer;
+}

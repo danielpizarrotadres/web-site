@@ -27,6 +27,7 @@ import { BiMinusFront } from "react-icons/bi";
 import { FaBriefcase } from "react-icons/fa";
 import useWindowSize from './utils/hooks/useWindowSize';
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { MobileNavigation } from './components/MobileNavigation';
 
 const App = () => {
     const [size, setSize] = useState('lg');
@@ -730,7 +731,7 @@ const App = () => {
 
     return (
         <main>
-            {toggle.show && mobileNav()}
+            {toggle.show && <MobileNavigation />}
             { /* onClick={handle} */}
             <div
                 onClick={handle}
