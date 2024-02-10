@@ -9,7 +9,7 @@ import { IoMdClose } from 'react-icons/io';
 import locales from '../locales/en.json'
 
 export const MobileNavigation = () => {
-    const { navigation } = locales;
+    const { navigation: { items, title } } = locales;
 
     useEffect(() => {
         // Implement
@@ -27,12 +27,12 @@ export const MobileNavigation = () => {
         <nav className={classes.MobileNav}>
             <div className={classes.NavMenu}>
                 <div className={classes.MobileNavigationHeader}>
-                    <h2>Navigation</h2>
+                    <h2>{title}</h2>
                     <IoMdClose className={classes.Closing} onClick={closeMobileNavigation} />
                 </div>
                 <section className={classes.MobileNavigationItems}>
                     <ul>
-                        {navigation.items.map(({ label, id }) =>
+                        {items.map(({ label, id }) =>
                             <li
                                 key={id}
                                 className={classes.MobileNavigationActiveItem}
