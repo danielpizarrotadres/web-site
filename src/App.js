@@ -307,15 +307,6 @@ const App = () => {
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
                             <a
-                                href='https://nodejs.org/en'
-                                target='_blank'
-                                className={classes.ToolsContainerTechnologiesItemDescription}
-                            >
-                                Node
-                            </a>
-                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
-                            </span>
-                            <a
                                 href='https://www.djangoproject.com/'
                                 target='_blank'
                                 className={classes.ToolsContainerTechnologiesItemDescription}
@@ -715,7 +706,7 @@ const App = () => {
         return <React.Fragment>
             <main>
                 <article className={classes.ArticleContainer}>
-                    <h1>Writing on JavaScript, React and web development in general.</h1>
+                    <h1>Writing about JavaScript, React and web development in general.</h1>
                     <h5>Whenever I feel like writing down something I've learnt, I do it here.</h5>
                 </article>
                 {size == 'sm' ? articlesListItemMobile() : articleListItemDesktop()}
@@ -773,7 +764,8 @@ const App = () => {
                 </div>
 
                 <div className={items[2].selected ? classes.FadeIn : classes.FadeOut}>
-                    {items[2].selected && projects()}
+                    {/* TODO: Active Projects View {items[2].selected && projects()} */}
+                    {items[2].selected && home()}
                 </div>
 
                 {   /*********************** Main End *****************/}
