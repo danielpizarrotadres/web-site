@@ -737,7 +737,6 @@ footer {
 }
 
 .ArticlesItemDesktop {
-    border-left: 1px solid rgba(63, 63, 70, 0.4);
     display: flex;
     opacity: 1;
 }
