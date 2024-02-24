@@ -307,15 +307,6 @@ const App = () => {
                             <span className={classes.ToolsContainerTechnologiesItemPoint}>
                             </span>
                             <a
-                                href='https://nodejs.org/en'
-                                target='_blank'
-                                className={classes.ToolsContainerTechnologiesItemDescription}
-                            >
-                                Node
-                            </a>
-                            <span className={classes.ToolsContainerTechnologiesItemPoint}>
-                            </span>
-                            <a
                                 href='https://www.djangoproject.com/'
                                 target='_blank'
                                 className={classes.ToolsContainerTechnologiesItemDescription}
@@ -608,7 +599,7 @@ const App = () => {
                     <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
                 </div>
             </div>
-            <div className={classes.ArticlesItem}>
+            {/* <div className={classes.ArticlesItem}>
                 <div className={classes.ArticlesItemTop}>
                     <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
                     <span className={classes.ArticlesItemTopDurationOfRead}>6 min read</span>
@@ -645,7 +636,7 @@ const App = () => {
                     <span>Read article</span>
                     <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
                 </div>
-            </div>
+            </div> */}
         </section>
     }
 
@@ -670,7 +661,7 @@ const App = () => {
                     </div>
                 </div>
             </div>
-            <div className={classes.ArticlesItemDesktop}>
+            {/* <div className={classes.ArticlesItemDesktop}>
                 <div className={classes.ArticlesItemDesktopLeft}>
                     <span className={classes.ArticlesItemDesktopLeftDate}>January 4, 2024</span>
                     <span className={classes.ArticlesItemDesktopDurationOfRead}>6 min read</span>
@@ -707,7 +698,7 @@ const App = () => {
                         <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </section>
     }
 
@@ -715,7 +706,7 @@ const App = () => {
         return <React.Fragment>
             <main>
                 <article className={classes.ArticleContainer}>
-                    <h1>Writing on JavaScript, React and web development in general.</h1>
+                    <h1>Writing about JavaScript, React and web development in general.</h1>
                     <h5>Whenever I feel like writing down something I've learnt, I do it here.</h5>
                 </article>
                 {size == 'sm' ? articlesListItemMobile() : articleListItemDesktop()}
@@ -773,7 +764,8 @@ const App = () => {
                 </div>
 
                 <div className={items[2].selected ? classes.FadeIn : classes.FadeOut}>
-                    {items[2].selected && projects()}
+                    {/* TODO: Active Projects View {items[2].selected && projects()} */}
+                    {items[2].selected && home()}
                 </div>
 
                 {   /*********************** Main End *****************/}
