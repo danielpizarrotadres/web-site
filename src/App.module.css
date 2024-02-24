@@ -409,18 +409,19 @@
 .StackContainerTechnologiesItem {
     width: 100%;
     margin-bottom: 2rem;
+    margin-top: 2rem;
     cursor: pointer;
     border-radius: 18px;
 
-    padding: 2rem;
+    /* padding: 2rem; */
     box-sizing: border-box;
-    transition-timing-function: ease-in-out;
+    /* transition-timing-function: ease-in-out; */
 }
 
-.StackContainerTechnologiesItem:hover {
+/* .StackContainerTechnologiesItem:hover {
     background-color: #27272a66;
     transition: all 1s;
-}
+} */
 
 .StackContainerTechnologiesItem:active .StackContainerTechnologiesItemDescriptionTitleDotted {
     border: 3px dotted #fbcfe8e6;
@@ -682,14 +683,14 @@ footer {
 .ArticlesItem {
     cursor: pointer;
     margin-top: 24px;
-    padding: 1.3em;
+    margin-bottom: 48px;
     border-radius: 18px;
 }
 
-.ArticlesItem:hover {
+/* .ArticlesItem:hover {
     background-color: #27272a66;
     transition: all 1s;
-}
+} */
 
 .ArticlesItemTop {
     border-left: 2px solid rgb(161 161 170/1);
