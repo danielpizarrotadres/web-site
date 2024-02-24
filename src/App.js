@@ -599,7 +599,7 @@ const App = () => {
                     <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
                 </div>
             </div>
-            <div className={classes.ArticlesItem}>
+            {/* <div className={classes.ArticlesItem}>
                 <div className={classes.ArticlesItemTop}>
                     <span className={classes.ArticlesItemTopDate}>January 4, 2024</span>
                     <span className={classes.ArticlesItemTopDurationOfRead}>6 min read</span>
@@ -636,7 +636,7 @@ const App = () => {
                     <span>Read article</span>
                     <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
                 </div>
-            </div>
+            </div> */}
         </section>
     }
 
@@ -661,7 +661,7 @@ const App = () => {
                     </div>
                 </div>
             </div>
-            <div className={classes.ArticlesItemDesktop}>
+            {/* <div className={classes.ArticlesItemDesktop}>
                 <div className={classes.ArticlesItemDesktopLeft}>
                     <span className={classes.ArticlesItemDesktopLeftDate}>January 4, 2024</span>
                     <span className={classes.ArticlesItemDesktopDurationOfRead}>6 min read</span>
@@ -698,7 +698,7 @@ const App = () => {
                         <FaLongArrowAltRight className={classes.ArticlesArrowIcon} />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </section>
     }
 
