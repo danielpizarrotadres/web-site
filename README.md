@@ -1,4 +1,4 @@
-# Dani personal web site
+# Personal web site
 ## Server Information
 
 ### Environment
