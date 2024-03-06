@@ -6,7 +6,8 @@
 
 .App {
     height: 100vh;
-    background-image: none; /* url('https://innocenzi.dev/assets/background.90c96182.webp'); */
+    background-image: none;
+    /* url('https://innocenzi.dev/assets/background.90c96182.webp'); */
     background-color: var(--primary-black);
     background-repeat: no-repeat;
     padding: 0 10rem;

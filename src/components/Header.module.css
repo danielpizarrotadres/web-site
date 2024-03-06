@@ -1,0 +1,15 @@
+.Header {
+    /* border: 1px solid white; */
+    padding: 5rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo {
+    display: inline-block;
+    border-radius: 100%;
+    border: 3px solid var(--border-logo);
+    height: 44px;
+    width: 44px;
+}
