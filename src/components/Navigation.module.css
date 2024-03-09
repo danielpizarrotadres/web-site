@@ -1,18 +1,55 @@
-.Toggle {
-    background-color: rgb(24 24 27/1);
-    color: #E4E4E7;
-    height: 44px;
-    width: 93.4844px;
-    cursor: pointer;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 14px;
-    padding: 12px 16px;
-    border-radius: 1.5rem;
+:root {
+    --primary-black: #040404;
+    --secondary-black: #18181B;
+    --primary-gray: #27272ae6;
+    --secondary-gray: #95959e;
+    --primary-white: #ffffff;
+    --primary-pink: #FBCFE8;
+    --border-logo: rgb(255 255 255 / .1);
+    --navigation-height: 44px;
+}
+
+.Navigation {
+    display: inline-block;
+}
+
+.ItemList {
+    height: var(--navigation-height);
+    background-color: var(--primary-gray);
+    display: flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 0 0.75rem;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
         rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-    border: none;
-    font-weight: 500;
+}
+
+.Item {
+    display: block;
+}
+
+.Link {
+    color: var(--primary-white);
+    padding: 12px 16px;
+    font-weight: 600;
+    font-size: .875rem;
+    line-height: 1.25rem;
+
+    /*
+        The following classes are usefull for Menu Navigation on moviles devies.
+        This allow position centered the Menu text and the arrow Icon,
+        Without this classes both elements, the text and the arrow icon will be
+        displayed in the dom without a correct position and alignment
+    */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.HomeIcon {
+    position: relative;
+    bottom: -1px;
 }
 
 .ArrowIcon {
@@ -37,4 +74,33 @@
 
     transform: rotate(180deg);
     transition: transform 1s;
+}
+
+.Link:active {
+    color: var(--primary-pink);
+}
+
+.Link:hover {
+    color: var(--primary-pink);
+}
+
+.LinkSelected {
+    color: var(--primary-pink);
+}
+
+.Toggle {
+    background-color: rgb(24 24 27/1);
+    color: #E4E4E7;
+    height: 44px;
+    width: 93.4844px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 12px 16px;
+    border-radius: 1.5rem;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border: none;
+    font-weight: 500;
 }

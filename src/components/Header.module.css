@@ -1,5 +1,4 @@
 .Header {
-    /* border: 1px solid white; */
     padding: 5rem 0 0 0;
     display: flex;
     justify-content: space-between;
@@ -12,4 +11,10 @@
     border: 3px solid var(--border-logo);
     height: 44px;
     width: 44px;
+}
+
+@media screen and (max-width: 912px) {
+    .Header {
+        padding: 5rem 0 0 0;
+    }
 }
