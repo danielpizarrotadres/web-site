@@ -550,7 +550,7 @@ const App = () => {
             <main>
                 <header className={classes.Main}>
                     <p className={classes.Title}>
-                        Hi, I am Dani
+                        Hello, I am Daniel
                         <br />
                         <span className={classes.SubTitle}>
                             web developer,
