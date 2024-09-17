@@ -23,6 +23,10 @@ import { FaBriefcase } from "react-icons/fa";
 import useWindowSize from './utils/hooks/useWindowSize';
 import { FaLongArrowAltRight } from "react-icons/fa";
 
+import { RiReactjsLine } from "react-icons/ri";
+import { FaNode } from "react-icons/fa";
+import { IoLogoNodejs } from "react-icons/io5";
+
 const App = () => {
     const [size, setSize] = useState('lg');
     const [toggle, setToggle] = useState({
@@ -217,7 +221,7 @@ const App = () => {
                         onClick={() => handleOnClickStack(urls[1])}
                     >
                         <div className={classes.StackContainerTechnologiesItemIcon}>
-                            <FaReact className={classes.StackContainerIcon} />
+                            <RiReactjsLine className={classes.StackContainerIcon} />
                         </div>
                         <div className={classes.StackContainerTechnologiesItemDescription}>
                             <h4
@@ -240,7 +244,7 @@ const App = () => {
                         onClick={() => handleOnClickStack(urls[0])}
                     >
                         <div className={classes.StackContainerTechnologiesItemIcon}>
-                            <SiExpress className={classes.StackContainerIcon} />
+                            <IoLogoNodejs className={classes.StackContainerIcon} />
                         </div>
                         <div className={classes.StackContainerTechnologiesItemDescription}>
                             <h4
