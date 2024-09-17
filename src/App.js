@@ -746,7 +746,8 @@ const App = () => {
                 </div>
 
                 <div className={items[1].selected ? classes.FadeIn : classes.FadeOut}>
-                    {items[1].selected && articles()}
+                    {/* TODO: restore {items[1].selected && articles()} */}
+                    {items[1].selected && home()}
                 </div>
 
                 <div className={items[2].selected ? classes.FadeIn : classes.FadeOut}>
