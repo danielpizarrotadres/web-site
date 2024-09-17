@@ -539,7 +539,7 @@ const App = () => {
                         Hello, I am Daniel
                         <br />
                         <span className={classes.SubTitle}>
-                            web developer,
+                            web and mobile developer,
                             <br />
                             from Chile.
                         </span>
