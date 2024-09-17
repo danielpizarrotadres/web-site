@@ -15,7 +15,7 @@
     /* url('https://innocenzi.dev/assets/background.90c96182.webp'); */
     background-color: var(--primary-black);
     background-repeat: no-repeat;
-    padding: 0 278px;
+    padding: 0 400px;
     font-family: inherit;
     overflow: auto;
     /* This allow avoid overflow. */
@@ -23,8 +23,9 @@
 
 @media screen and (max-width: 1400px) {
     .App {
-        padding: 0 32px;
+        padding: 0 120px;
         /* filter: blur(4px); */
+        border: 1px solid red;
     }
 
     .AppBlured {
