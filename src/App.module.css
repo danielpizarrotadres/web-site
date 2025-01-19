@@ -33,6 +33,16 @@
     }
 }
 
+@media screen and (max-width: 420px) {
+    .App {
+        padding: 0 60px;
+    }
+
+    .AppBlured {
+        filter: blur(4px);
+    }
+}
+
 /************************************************ Fades *************************************************/
 .FadeIn {
     opacity: 1;
