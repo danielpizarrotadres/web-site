@@ -150,9 +150,9 @@ const App = () => {
             <div className={classes.Resume}>
                 <p className={classes.TopItem}>
                     I make web and mobile applications. 
-                    I work together with people <span className={classes.ScreenPlay}>—</span> companies, organizations and startups 
-                    to <span className={classes.Highlight}>solve their problems</span> with
-                    custom made software wich <span className={classes.PinkHighlight}> generates values to our customers business</span>
+                    I work together with people <span className={classes.ScreenPlay}>—</span>companies, organizations and startups 
+                    to <span className={classes.Highlight}>bring value</span> to business with <br />
+                    <span className={classes.PinkHighlight}>custom made software</span>
                     <br />
                 </p>
             </div>
@@ -543,9 +543,8 @@ const App = () => {
                         Hello, I am Daniel
                         <br />
                         <span className={classes.SubTitle}>
-                            web and mobile developer,
+                            web developer from Chile.
                             <br />
-                            from Chile.
                         </span>
                     </p>
                 </header>
