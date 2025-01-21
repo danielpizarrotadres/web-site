@@ -25,7 +25,7 @@
     .App {
         padding: 0 120px;
         /* filter: blur(4px); */
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .AppBlured {
@@ -356,7 +356,7 @@
     display: inline;
     font-weight: 500;
     position: relative;
-    right: 5px;
+    right: 10px;
 }
 
 .PinkSlim {
