@@ -284,7 +284,7 @@
 
 .Resume {
     max-width: 672px;
-    margin: 48px 0 0 0;
+    margin: 12px 0 0 0;
     /* border: 1px solid orangered; */
     text-align: justify;
 }
@@ -440,6 +440,7 @@
 
 .StackContainerTechnologiesItemIcon {
     background-color: #27272a66;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     border-radius: 9999px;
     display: flex;
     align-items: center;
