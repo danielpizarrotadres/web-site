@@ -45,16 +45,16 @@ const App = () => {
             name: 'About',
             selected: true
         },
-        {
-            index: 1,
-            name: 'Articles',
-            selected: false
-        },
-        {
-            index: 2,
-            name: 'Projects',
-            selected: false
-        }
+        // {
+        //     index: 1,
+        //     name: 'Articles',
+        //     selected: false
+        // },
+        // {
+        //     index: 2,
+        //     name: 'Projects',
+        //     selected: false
+        // }
     ]);
 
     useEffect(() => {
@@ -748,15 +748,15 @@ const App = () => {
                     {items[0].selected && home()}
                 </div>
 
-                <div className={items[1].selected ? classes.FadeIn : classes.FadeOut}>
-                    {/* TODO: restore {items[1].selected && articles()} */}
+                {/* <div className={items[1].selected ? classes.FadeIn : classes.FadeOut}>
+                    TODO: restore {items[1].selected && articles()}
                     {items[1].selected && home()}
                 </div>
 
                 <div className={items[2].selected ? classes.FadeIn : classes.FadeOut}>
-                    {/* TODO: Active Projects View {items[2].selected && projects()} */}
+                    TODO: Active Projects View {items[2].selected && projects()}
                     {items[2].selected && home()}
-                </div>
+                </div> */}
 
                 {   /*********************** Main End *****************/}
 
