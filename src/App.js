@@ -26,6 +26,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { RiReactjsLine } from "react-icons/ri";
 import { FaNode } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io5";
+import { FaNodeJs } from "react-icons/fa";
 
 const App = () => {
     const [size, setSize] = useState('lg');
@@ -221,7 +222,7 @@ const App = () => {
                         onClick={() => handleOnClickStack(urls[1])}
                     >
                         <div className={classes.StackContainerTechnologiesItemIcon}>
-                            <RiReactjsLine className={classes.StackContainerIcon} />
+                            <RiReactjsLine className={classes.StackContainerIconReact} />
                         </div>
                         <div className={classes.StackContainerTechnologiesItemDescription}>
                             <h4
@@ -244,7 +245,7 @@ const App = () => {
                         onClick={() => handleOnClickStack(urls[0])}
                     >
                         <div className={classes.StackContainerTechnologiesItemIcon}>
-                            <IoLogoNodejs className={classes.StackContainerIcon} />
+                            <FaNodeJs className={classes.StackContainerIconExpress} />
                         </div>
                         <div className={classes.StackContainerTechnologiesItemDescription}>
                             <h4
