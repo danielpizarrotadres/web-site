@@ -434,9 +434,9 @@
     transition: all 1s;
 }
 
-.StackContainerTechnologiesItem:active .StackContainerTechnologiesItemDescriptionTitleDotted {
+/* .StackContainerTechnologiesItem:active .StackContainerTechnologiesItemDescriptionTitleDotted {
     border: 3px dotted #fbcfe8e6;
-}
+} */
 
 .StackContainerTechnologiesItemIcon {
     background-color: #27272a66;
