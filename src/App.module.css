@@ -424,15 +424,15 @@
     cursor: pointer;
     border-radius: 18px;
 
-    /* padding: 2rem; */
+    padding: 2rem;
     box-sizing: border-box;
-    /* transition-timing-function: ease-in-out; */
+    transition-timing-function: ease-in-out;
 }
 
-/* .StackContainerTechnologiesItem:hover {
+.StackContainerTechnologiesItem:hover {
     background-color: #27272a66;
     transition: all 1s;
-} */
+}
 
 .StackContainerTechnologiesItem:active .StackContainerTechnologiesItemDescriptionTitleDotted {
     border: 3px dotted #fbcfe8e6;
